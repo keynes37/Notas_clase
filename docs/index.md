@@ -1,30 +1,32 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
-date: "2021-05-21"
+title: "Lecturas de Clase Econometría I en R"
+author: "Carlos Andres Yanes Guerra"
+date: "2021-05-22"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R"
 ---
 
-# Prerequisites
+# Presentación {-}
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+<img src="imagenes/log1.jpg" width="30%" style="display: block; margin: auto auto auto 0;" />
 
-The **bookdown** package can be installed from CRAN or Github:
+Este libro intenta ser una guía practica del curso de Econometría I de la **Universidad del Norte** que se encuentra ubicada en la costa norte de Colombia. Posee un singular número de aplicativos prácticos, que son guiados utilizando los *principales* comandos del programa (software) **R** que son aprendidos por los estudiantes durante la clase magistral.
+
+Para esta ocasión, se hace uso del Software **R**. El cual es: *Un lenguaje de programación  de código abierto y que es enfocado en el análisis de datos, especialmente en el tema estadístico.* Sus creadores son Robert Gentleman y Ross Ihaka. En el link de <https://www.r-project.org/index.html> podrá encontrar todo lo relacionado con el programa y mayor información.
+
+Uno de los *paquetes* que mas se utilizará en esta guía es el **Tidyverse**, que puede ser instalado desde el CRAN de la siguiente forma:
 
 
 ```r
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
+install.packages("tidyverse")
+# Paquete para trabajar directamente
 ```
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+Los complementos y bases de este curso regularmente son demos de otras bases reales o utilizadas en los distintos textos de econometría que han venido realizando investigación empírica.
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
-
+Muchos de los comandos y códigos aquí utilizados fueron tomados del sitio web de Florian Heiss: <http://www.urfie.net/> que hace referencia al uso de **R** en la Econometría.
 

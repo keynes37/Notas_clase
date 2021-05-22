@@ -1,0 +1,130 @@
+# Datos
+
+Una de las cosas mas importantes que debe hacer todo economista al hacer uso de **R**, es importar las **bases de datos** con las que pretende trabajar y armar su *proyecto*. Los datos vienen desde distintos formatos y poseen varias clasificaciones, recordemos unos conceptos claves para avanzar
+
+- **Base de datos**: Es una colección especifica de datos.
+- Que posee un **formato** ``popular'', es decir, es una tabla (matrices)
+- También es de forma *rectangular* cuya organización aborda **filas** y **columnas**.
+- Una **fila** tiene datos de una o varias *variables* para un mismo **individuo**.
+- Una **columna** contiene valores de una *variable* para muchos individuos.
+
+Por otro lado, podemos tener <span style="color:blue"> datos </span> de los siguientes tipos:
+
+- <span style="color:red">Índices</span>: Es la parte de nombres, números de identificación o cuestionario en una base de datos.
+- <span style="color:red">Binarios</span>: Variables que tienen sólo dos posibles respuestas. Ej: Si, no; Femenino, masculino, etc. Se codifican con (0 y 1), y se les conoce como variable *dummy*.
+- <span style="color:red">De conteo</span>: Números enteros de no negación.
+- <span style="color:red">Continuos</span>: Aquellos que admiten decimales.
+- <span style="color:red">Nominales</span>: Respuestas no ordenadas y que amplían el espectro de las variables binarias, suelen ser datos categóricos. 
+- <span style="color:red">Ordinales</span>: Admiten respuestas nominales pero en esencia *ordenadas* y son codificadas con números.
+
+
+## Estructuras de datos usualmente utilizadas en econometría
+
+En economía regularmente se trabaja con tres tipos de bases de datos conocidos como **Corte Transversal**, **Series de Tiempo** y **Paneles longitudinales**.
+
+### Datos de corte transversal
+
+Son aquellas *bases* que regularmente tienen información en un solo periodo de tiempo y que varían por individuos, instituciones, países o empresas. Se denotan sus observaciones con el subíndice (i), por ejemplo: $X_{i}$. Donde $X$ hace referencia a cada una de las variables como el nombre, la edad, los ingresos, etc.  
+
+```{r, echo=FALSE, warning=FALSE, fig.cap="Datos de Corte transversal. Fuente: Elaboración del Autor"}
+library(flextable)
+library(magrittr)
+library(charlatan)
+
+
+set.seed(123) # semilla de uso
+
+n <- 7
+ctbase <- data.frame(
+  Nombre = ch_name(n = n, locale = NULL),
+  Grado = as.Date(as.POSIXct(unlist(ch_date_time(n = n)), origin = "1994-01-01")) + 3*365,
+  Edad = as.integer(ch_integer(n = n, min =21 , max = 37)),
+  Ingresos = rnorm(n = n, mean = 900000, sd = 150000),
+  Peso = runif(n = n, min = 50, max = 110),
+  Altura = rnorm(n = n, mean = 170, sd = 5),
+  Color_ojos = as.factor(sample(c("Azules", "Verdes", "Oscuros"), prob = c(.15, .3, .55), size = n, replace = TRUE)),
+  stringsAsFactors = FALSE
+) 
+ctbase[2:4, 4] <- NA_real_
+
+set_flextable_defaults(
+  post_process_html = function(x){
+    theme_tron(x) %>% autofit()
+  }
+)
+
+ft <- flextable(ctbase) %>% 
+  colformat_double(digits = 1,
+    big.mark = " ", decimal.mark = ",",
+    na_str = "na", j = ~ . - Ingresos) %>% 
+  colformat_double(digits = 0,
+    big.mark = " ", 
+    prefix = "$", 
+    na_str = "No responde", j = "Ingresos") %>% 
+  colformat_int(j = "Edad", prefix = "# ") %>% 
+  colformat_char(j = "Color_ojos", prefix = "color: ") %>% 
+  colformat_date(fmt_date = "%d/%m/%Y")
+ft
+```
+
+### Datos de series de tiempo
+Por otro lado, existen bases que tienen en común un individuo (i), pero que varian en el tiempo. Los datos de este tipo suelen ser denominados **macroeconómicos** o series "Macro", un ejemplo de esto es el PIB de un país cualquiera desde el año de 2015 al 2021. Las series se denotan con el subíndice (t) que hace referencia al periodo de estudio, es decir, $X_{t}$.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+set.seed(123)
+
+n <- 7
+stbase <- data.frame(
+  t = format(as.Date(paste(2015:2021, "01", "01",sep="-"), format="%Y-%m-%d"), "%Y" ),
+  PIB = rnorm(n = n, mean = 150, sd = 70),
+  IPC = rnorm(n = n, mean = 90, sd = 10))
+
+set_flextable_defaults(
+  post_process_html = function(x){
+    theme_tron(x) %>% autofit()
+  }
+)
+
+fts <- flextable(stbase)%>%
+colformat_double(j="PIB",suffix=" Mill. de $", digits = 2,
+    big.mark = " ", decimal.mark = ".")%>%
+colformat_double(j="IPC", digits=1, decimal.mark=",")  
+fts
+
+```
+
+
+### Panel Longitudinal
+
+Los datos que provienen de un **Panel** son realizados por instituciones o empresas privadas que le hacen *seguimiento* a un individuo (i) en varios periodos de tiempo. Este tipo de datos se denota como $X_{it}$. Note que ahora hay dos subíndices, ya que se mide por tiempo e individuo.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+set.seed(173)
+
+n <- 7
+itbase <- data.frame(
+  t = c("2014","2015","2014","2015","2014","2015","2014"),
+  Paises= c("Colombia","Colombia", "Perú","Perú", "Brasil", "Brasil","Chile"),
+  PIB = rnorm(n = n, mean = 150, sd = 80),
+  IPC = rnorm(n = n, mean = 90, sd = 10))
+
+set_flextable_defaults(
+  post_process_html = function(x){
+    theme_tron(x) %>% autofit()
+  }
+)
+
+fpt <- flextable(itbase)%>%
+colformat_double(j="PIB",suffix=" Mill. de $", digits = 2,
+    big.mark = " ", decimal.mark = ".")%>%
+colformat_double(j="IPC", digits=1, decimal.mark=",")  
+fpt
+
+```
+
+
+
+## Importación de datos
+
+Ahora esto, pero mirando el git adicional
+

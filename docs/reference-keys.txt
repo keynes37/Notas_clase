@@ -1,8 +1,13 @@
-fig:nice-fig
-tab:nice-tab
-prerequisites
+exm:Pr1
 intro
-literature
+bit
+otras-operaciones-y-calculos
+datos
+estructuras-de-datos-usualmente-utilizadas-en-econometría
+datos-de-corte-transversal
+datos-de-series-de-tiempo
+panel-longitudinal
+importación-de-datos
 methods
 applications
 example-one

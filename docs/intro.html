@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 Introduction | A Minimal Book Example</title>
-  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <title>Capítulo 1 Primeros calculos en R | Lecturas de Clase Econometría I en R</title>
+  <meta name="description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 Introduction | A Minimal Book Example" />
+  <meta property="og:title" content="Capítulo 1 Primeros calculos en R | Lecturas de Clase Econometría I en R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta property="og:description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 Introduction | A Minimal Book Example" />
+  <meta name="twitter:title" content="Capítulo 1 Primeros calculos en R | Lecturas de Clase Econometría I en R" />
   
-  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="twitter:description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
   
 
-<meta name="author" content="Yihui Xie" />
+<meta name="author" content="Carlos Andres Yanes Guerra" />
 
 
-<meta name="date" content="2021-05-21" />
+<meta name="date" content="2021-05-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="literature.html"/>
+<link rel="next" href="datos.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/tabwid-1.0.0/tabwid.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -131,22 +132,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presentación</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Primeros calculos en R</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#bit"><i class="fa fa-check"></i><b>1.1</b> Script o archivo tipo bitacora</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#otras-operaciones-y-calculos"><i class="fa fa-check"></i><b>1.2</b> Otras operaciones y calculos</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="2" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>2</b> Datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="datos.html"><a href="datos.html#estructuras-de-datos-usualmente-utilizadas-en-econometría"><i class="fa fa-check"></i><b>2.1</b> Estructuras de datos usualmente utilizadas en econometría</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="datos.html"><a href="datos.html#datos-de-corte-transversal"><i class="fa fa-check"></i><b>2.1.1</b> Datos de corte transversal</a></li>
+<li class="chapter" data-level="2.1.2" data-path="datos.html"><a href="datos.html#datos-de-series-de-tiempo"><i class="fa fa-check"></i><b>2.1.2</b> Datos de series de tiempo</a></li>
+<li class="chapter" data-level="2.1.3" data-path="datos.html"><a href="datos.html#panel-longitudinal"><i class="fa fa-check"></i><b>2.1.3</b> Panel Longitudinal</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="datos.html"><a href="datos.html#importación-de-datos"><i class="fa fa-check"></i><b>2.2</b> Importación de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
+<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a><ul>
+<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -156,7 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lecturas de Clase Econometría I en R</a>
           </h1>
         </div>
 
@@ -165,187 +170,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
-<h1><span class="header-section-number">Capítulo 2</span> Introduction</h1>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">2</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="methods.html#methods">4</a>.</p>
-<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
-<span id="cb2-2"><a href="intro.html#cb2-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
-<img src="01-intro_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
-<p class="caption">
-Figura 2.1: Here is a nice figure!
-</p>
+<h1><span class="header-section-number">Capítulo 1</span> Primeros calculos en R</h1>
+<p>La idea es familiarizarse con el entorno de <strong>R</strong> y definirlo como lo que es, una “calculadora”. Es por esto que una forma de hacer calculos con la base instrumental que trae el programa, se presenta a continuación.</p>
+
+<div class="example">
+<span id="exm:Pr1" class="example"><strong>Ejemplo 1.1  (Operaciones básicas)  </strong></span>Si intentamos sumar un par de números enteros es facíl tener:
 </div>
-<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="intro.html#fig:nice-fig">2.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="intro.html#tab:nice-tab">2.1</a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="intro.html#cb3-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
-<span id="cb3-2"><a href="intro.html#cb3-2"></a>  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb3-3"><a href="intro.html#cb3-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
-<span id="cb3-4"><a href="intro.html#cb3-4"></a>)</span></code></pre></div>
+
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1"></a>  <span class="dv">3</span><span class="op">+</span><span class="dv">5</span> <span class="co">#Una suma o adición</span></span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Si por otro lado se quiere un producto de 1255 con la <span class="math inline">\(\sqrt{25}\)</span>, entonces debe ser escrito de tal forma que</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="intro.html#cb4-1"></a><span class="dv">1255</span><span class="op">*</span><span class="kw">sqrt</span>(<span class="dv">25</span>) <span class="co">#Producto con la raíz cuadrada de 25</span></span></code></pre></div>
+<pre><code>## [1] 6275</code></pre>
+<p>Si se desea obtener una seguidilla de calculos ya toca escribirlos -<em>como si fuera una lista</em>- e implementarlos directamente, ya es:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="intro.html#cb6-1"></a>  <span class="dv">13</span><span class="op">**</span><span class="dv">2</span> <span class="co">#Potencia de un número</span></span>
+<span id="cb6-2"><a href="intro.html#cb6-2"></a>  <span class="dv">300</span><span class="op">/</span><span class="dv">25</span> <span class="co">#Simple división entre 300 y 25</span></span>
+<span id="cb6-3"><a href="intro.html#cb6-3"></a>  <span class="dv">450</span><span class="op">+</span><span class="dv">320</span><span class="op">+</span><span class="dv">112</span> <span class="co">#Suma de tres números enteros</span></span>
+<span id="cb6-4"><a href="intro.html#cb6-4"></a>  <span class="kw">sqrt</span>(<span class="dv">12</span>) <span class="co">#La raíz cuadrada del número 12</span></span></code></pre></div>
+<p>Todas las operaciones que se deseen realizar en <strong>R</strong> que involucran operaciones matemáticas, pueden ser escritos directamente y obtendremos los resultados deseados.</p>
+<p>Note que el operador (#) es para decirle al programa que no ejecute lo que se encuentra después de él, se usa para tomar notas o escribir algo al respecto en los archivos <strong>script</strong> de <strong>R</strong>, por ejemplo:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1"></a><span class="co">#Soy carlos yanes</span></span></code></pre></div>
+<div id="bit" class="section level2">
+<h2><span class="header-section-number">1.1</span> Script o archivo tipo bitacora</h2>
+<p>Los <strong>script</strong> son archivos que comunmente se desarrollan en formato de <em>texto</em> o de <em>bloc de notas</em>. Constituye la forma de llevar y controlar los codigos que se van a implementar los calculos y se referencian como bitacoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de <strong>R</strong> en un formato clasico o si ya se hace uso de <a href="https://rstudio.com/products/rstudio/download/">R Studio</a> que es un potente aliado<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> en el entorno de ejecución del programa <strong>R</strong>, se le denomina IDE<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<p>Abrir un archivo tipo <strong>script</strong> en <strong>R Studio</strong> es sencillo, solo hay que ir al panel superior izquierdo del programa y debajo de la pestaña de File se encuentra el logo (+) y al dar <em>click</em> se le desplegará la lista de opciones y en el, es solo volver a dar <em>click</em> donde dice <strong>R Script</strong>, una forma mas rápida con el teclado es con las teclas <code>Ctrl+Shift+N</code>.</p>
+<p><img src="imagenes/C0.png" width="75%" style="display: block; margin: auto;" />
+Al crear un <strong>script</strong> en <strong>R Studio</strong>, podrá desarrollar y escribir los codigos con el cual va realizar su trabajo, por ejemplo:</p>
+<p><img src="imagenes/C1.png" width="75%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="otras-operaciones-y-calculos" class="section level2">
+<h2><span class="header-section-number">1.2</span> Otras operaciones y calculos</h2>
+<p>En economía y en muchas ciencias sociales se hace uso extensivo de las <strong>matemáticas</strong> y de la <strong>estadística</strong>. Muchas veces será incluso necesario calcular o realizar algunas transformaciones en las variables para poder tener unas métricas mas informativas como son los <em>logaritmos</em>, <em>valores absolutos</em>, valores de forma <em>exponencial</em> o de notación científica, entre otros. Algunos comandos que se pueden usar en <strong>R</strong> para eso son:</p>
 <table>
-<caption><span id="tab:nice-tab">Tabla 2.1: </span>Here is a nice table!</caption>
 <thead>
 <tr class="header">
-<th align="right">Sepal.Length</th>
-<th align="right">Sepal.Width</th>
-<th align="right">Petal.Length</th>
-<th align="right">Petal.Width</th>
-<th align="left">Species</th>
+<th>Operación</th>
+<th>Resultado</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
+<td>Valor absoluto</td>
+<td>abs()</td>
 </tr>
 <tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
+<td>Logaritmo</td>
+<td>log()</td>
 </tr>
 <tr class="odd">
-<td align="right">4.7</td>
-<td align="right">3.2</td>
-<td align="right">1.3</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
+<td>Logaritmo base</td>
+<td>log(,)</td>
 </tr>
 <tr class="even">
-<td align="right">4.6</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
+<td>Exponencial</td>
+<td>exp()</td>
 </tr>
 <tr class="odd">
-<td align="right">5.0</td>
-<td align="right">3.6</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
+<td>Factorial</td>
+<td>factorial()</td>
 </tr>
 <tr class="even">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.7</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.6</td>
-<td align="right">3.4</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.0</td>
-<td align="right">3.4</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.4</td>
-<td align="right">2.9</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.7</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.8</td>
-<td align="right">3.4</td>
-<td align="right">1.6</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.8</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.3</td>
-<td align="right">3.0</td>
-<td align="right">1.1</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.8</td>
-<td align="right">4.0</td>
-<td align="right">1.2</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.7</td>
-<td align="right">4.4</td>
-<td align="right">1.5</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.3</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.7</td>
-<td align="right">3.8</td>
-<td align="right">1.7</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.8</td>
-<td align="right">1.5</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
+<td>Raíz cuadrada</td>
+<td>sqrt()</td>
 </tr>
 </tbody>
 </table>
-<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="#ref-xie2015" role="doc-biblioref">2015</a>)</span>.</p>
+<p>El <em>valor absoluto</em> de un número como por ejemplo puede ser simplemente:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="intro.html#cb8-1"></a>  <span class="kw">abs</span>(<span class="op">-</span><span class="dv">3</span>) <span class="co"># Es el valor absoluto de (-3)</span></span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p>Sin embargo, en una operación conjunta, si se posee una lista de elementos o un <strong>vector</strong> de elementos, es mucho mas simple implementarlo de tal forma que:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="intro.html#cb10-1"></a>  x&lt;-<span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">11</span>,<span class="op">-</span><span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">21</span>,<span class="op">-</span><span class="dv">31</span>,<span class="op">-</span><span class="dv">33</span>) <span class="co"># Lista de valores</span></span>
+<span id="cb10-2"><a href="intro.html#cb10-2"></a>  <span class="kw">abs</span>(x)</span></code></pre></div>
+<pre><code>## [1]  3  5  3 11 16 18 21 31 33</code></pre>
+<p>De igual forma, funciona con un <em>logaritmo</em> o también una operación que involucre una de forma de notación cientifica o <em>exponencial</em>, esto puede notarse así:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="intro.html#cb12-1"></a>  y&lt;-<span class="kw">c</span>(<span class="dv">15</span>,<span class="dv">21</span>,<span class="dv">23</span>,<span class="dv">29</span>,<span class="dv">16</span>,<span class="dv">28</span>,<span class="dv">32</span>,<span class="dv">45</span>,<span class="dv">33</span>) <span class="co"># Lista de valores para vector Y</span></span>
+<span id="cb12-2"><a href="intro.html#cb12-2"></a>  <span class="kw">log</span>(y) <span class="co">#Se calcula el logaritmo de cada uno de los elementos</span></span></code></pre></div>
+<pre><code>## [1] 2.708050 3.044522 3.135494 3.367296 2.772589 3.332205 3.465736 3.806662
+## [9] 3.496508</code></pre>
+<p>Observe que el <strong>Programa</strong> calcula el logaritmo natural de cada uno de los elementos del vector (y). Para la forma <em>exponencial</em>, es de uso de la notación del logaritmo base e y que muchos conocen como la expresión de <strong>Euler</strong>, e.g: <span class="math inline">\(e^{x}\)</span>, recuerde ademas que si este lo usamos de tal manera que <span class="math inline">\(Y=ln(e^{x})=x\)</span>. Un ejemplo de aplicación es</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="intro.html#cb14-1"></a>  x&lt;-<span class="dv">150</span> </span>
+<span id="cb14-2"><a href="intro.html#cb14-2"></a>  <span class="kw">exp</span>(x) <span class="co"># En R exp hace referencia a la formula de (e)</span></span></code></pre></div>
+<pre><code>## [1] 1.39371e+65</code></pre>
 
 </div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-xie2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.</p>
 </div>
-<div id="ref-R-bookdown">
-<p>Xie, Yihui. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.</p>
-</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Para mayor información consulte la pagina web o enlace de <strong>R Studio</strong>.<a href="intro.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Por sus siglas en ingles significa <em>Integrated Drive Electronics</em>, no es mas que un entorno de desarrollo interactivo que facilita interactuar mejor y de manera mas “amigable” con todos los asuntos de los lenguajes de programación<a href="intro.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -353,7 +267,7 @@ Figura 2.1: Here is a nice figure!
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="datos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -395,7 +309,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Notas_clase.pdf", "Notas_clase.epub"],
+"download": ["Notas_clase.pdf"],
 "toc": {
 "collapse": "subsection"
 }

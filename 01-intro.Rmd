@@ -1,21 +1,86 @@
-# Introduction {#intro}
+# Primeros calculos en R {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+La idea es familiarizarse con el entorno de **R** y definirlo como lo que es, una "calculadora". Es por esto que una forma de hacer calculos con la base instrumental que trae el programa, se presenta a continuación.
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
-
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
+```{example, label="Pr1", name="Operaciones básicas"}
+Si intentamos sumar un par de números enteros es facíl tener:
 ```
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
-
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
+```{r echo=TRUE}
+  3+5 #Una suma o adición
 ```
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+Si por otro lado se quiere un producto de 1255 con la $\sqrt{25}$, entonces debe ser escrito de tal forma que
+
+```{r}
+1255*sqrt(25) #Producto con la raíz cuadrada de 25
+```
+
+Si se desea obtener una seguidilla de calculos ya toca escribirlos -*como si fuera una lista*- e implementarlos directamente, ya es:
+
+```{r eval=FALSE} 
+  13**2 #Potencia de un número
+  300/25 #Simple división entre 300 y 25
+  450+320+112 #Suma de tres números enteros
+  sqrt(12) #La raíz cuadrada del número 12
+```
+
+Todas las operaciones que se deseen realizar en **R** que involucran operaciones matemáticas, pueden ser escritos directamente y obtendremos los resultados deseados.
+
+Note que el operador (#) es para decirle al programa que no ejecute lo que se encuentra después de él, se usa para tomar notas o escribir algo al respecto en los archivos **script** de **R**, por ejemplo:
+
+```{R }
+#Soy carlos yanes
+```
+
+## Script o archivo tipo bitacora {#bit}
+
+Los **script** son archivos que comunmente se desarrollan en formato de _texto_ o de _bloc de notas_. Constituye la forma de llevar y controlar los codigos que se van a implementar los calculos y se referencian como bitacoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de **R** en un formato clasico o si ya se hace uso de [R Studio](https://rstudio.com/products/rstudio/download/) que es un potente aliado^[Para mayor información consulte la pagina web o enlace de **R Studio**.] en el entorno de ejecución del programa **R**, se le denomina IDE^[Por sus siglas en ingles significa _Integrated Drive Electronics_, no es mas que un entorno de desarrollo interactivo que facilita interactuar mejor y de manera mas "amigable" con todos los asuntos de los lenguajes de programación].
+
+Abrir un archivo tipo **script** en **R Studio** es sencillo, solo hay que ir al panel superior izquierdo del programa y debajo de la pestaña de File se encuentra el logo (+) y al dar _click_ se le desplegará la lista de opciones y en el, es solo volver a dar _click_ donde dice **R Script**, una forma mas rápida con el teclado es con las teclas `Ctrl+Shift+N`.  
+
+```{r rmarkdown1, echo=FALSE, out.width='75%', fig.align='center'}
+knitr::include_graphics("imagenes/C0.png")
+```
+Al crear un **script** en **R Studio**, podrá desarrollar y escribir los codigos con el cual va realizar su trabajo, por ejemplo:
+
+```{r rmarkdown2, echo=FALSE, out.width='75%', fig.align='center'}
+knitr::include_graphics("imagenes/C1.png")
+```
+
+## Otras operaciones y calculos
+
+En economía y en muchas ciencias sociales se hace uso extensivo de las **matemáticas** y de la **estadística**. Muchas veces será incluso necesario calcular o realizar algunas transformaciones en las variables para poder tener unas métricas mas informativas como son los _logaritmos_, _valores absolutos_, valores de forma _exponencial_ o de notación científica, entre otros. Algunos comandos que se pueden usar en **R** para eso son:
+
+| Operación     | Resultado     |
+| ------------- | ------------- |
+| Valor absoluto| abs()         |
+| Logaritmo     | log()         |
+| Logaritmo base| log(,)        |
+| Exponencial   | exp()         |
+| Factorial     | factorial()   |
+| Raíz cuadrada | sqrt()        |
+
+El *valor absoluto* de un número como por ejemplo puede ser simplemente:
+
+```{r echo=TRUE}
+  abs(-3) # Es el valor absoluto de (-3)
+```
+Sin embargo, en una operación conjunta, si se posee una lista de elementos o un **vector** de elementos, es mucho mas simple implementarlo de tal forma que:
+
+```{r echo=TRUE}
+  x<-c(-3,-5,3,11,-16,18,21,-31,-33) # Lista de valores
+  abs(x)
+```
+De igual forma, funciona con un *logaritmo* o también una operación que involucre una de forma de notación cientifica o *exponencial*, esto puede notarse así:
+
+```{r echo=TRUE}
+  y<-c(15,21,23,29,16,28,32,45,33) # Lista de valores para vector Y
+  log(y) #Se calcula el logaritmo de cada uno de los elementos
+```
+Observe que el **Programa** calcula el logaritmo natural de cada uno de los elementos del vector (y). Para la forma *exponencial*, es de uso de la notación del logaritmo base e y que muchos conocen como la expresión de **Euler**, e.g: $e^{x}$, recuerde ademas que si este lo usamos de tal manera que $Y=ln(e^{x})=x$. Un ejemplo de aplicación es
+```{r echo=TRUE}
+  x<-150 
+  exp(x) # En R exp hace referencia a la formula de (e)
+```
