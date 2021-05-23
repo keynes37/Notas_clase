@@ -14,7 +14,7 @@ panel-longitudinal
 importación-de-datos
 datos-propios-en-r
 trabajando-con-data-frames
-metodos
+primer-análisis-de-datos
 aplicaciones
 caso-1
 caso-2

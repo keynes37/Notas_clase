@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Primeros cálculos en R | Notas de Clase de Econometría I en R</title>
-  <meta name="description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
+  <title>Capítulo 1 Primeros cálculos en R | Notas de Clase de Econometría (básica) en R</title>
+  <meta name="description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Primeros cálculos en R | Notas de Clase de Econometría I en R" />
+  <meta property="og:title" content="Capítulo 1 Primeros cálculos en R | Notas de Clase de Econometría (básica) en R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
+  <meta property="og:description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Primeros cálculos en R | Notas de Clase de Econometría I en R" />
+  <meta name="twitter:title" content="Capítulo 1 Primeros cálculos en R | Notas de Clase de Econometría (básica) en R" />
   
-  <meta name="twitter:description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
+  <meta name="twitter:description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   
 
 <meta name="author" content="Carlos Andres Yanes Guerra" />
 
 
-<meta name="date" content="2021-05-22" />
+<meta name="date" content="2021-05-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,7 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.1" data-path="datos.html"><a href="datos.html#trabajando-con-data-frames"><i class="fa fa-check"></i><b>2.3.1</b> Trabajando con Data Frames</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="metodos.html"><a href="metodos.html"><i class="fa fa-check"></i><b>3</b> Metodos</a></li>
+<li class="chapter" data-level="3" data-path="primer-análisis-de-datos.html"><a href="primer-análisis-de-datos.html"><i class="fa fa-check"></i><b>3</b> Primer análisis de datos</a></li>
 <li class="chapter" data-level="4" data-path="aplicaciones.html"><a href="aplicaciones.html"><i class="fa fa-check"></i><b>4</b> Aplicaciones</a><ul>
 <li class="chapter" data-level="4.1" data-path="aplicaciones.html"><a href="aplicaciones.html#caso-1"><i class="fa fa-check"></i><b>4.1</b> Caso 1</a></li>
 <li class="chapter" data-level="4.2" data-path="aplicaciones.html"><a href="aplicaciones.html#caso-2"><i class="fa fa-check"></i><b>4.2</b> Caso 2</a></li>
@@ -165,7 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas de Clase de Econometría I en R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas de Clase de Econometría (básica) en R</a>
           </h1>
         </div>
 
@@ -175,7 +175,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Capítulo 1</span> Primeros cálculos en R</h1>
-<p>La idea es familiarizarse con el entorno de <strong>R</strong> y definirlo como lo que es, una “calculadora”. Es por esto que una forma de hacer calculos con la base instrumental que trae el programa, se presenta a continuación.</p>
+<p>La idea es familiarizarse con el entorno de <strong>R</strong> y definirlo como lo que es, una “calculadora”. Es por esto que una forma de hacer cálculos con la base instrumental que trae el programa, se presenta a continuación.</p>
 
 <div class="example">
 <span id="exm:Pr1" class="example"><strong>Ejemplo 1.1  (Operaciones básicas)  </strong></span>Si intentamos sumar un par de números enteros es facíl tener:
@@ -183,7 +183,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1"></a>  <span class="dv">3</span><span class="op">+</span><span class="dv">5</span> <span class="co">#Una suma o adición</span></span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
-<p>Si por otro lado se quiere el producto de 1255 con la (raíz) del número 25 o <span class="math inline">\(\sqrt{25}\)</span>, entonces debe ser escrito de tal forma que</p>
+<p>Note que el resultado es similar a cualquier calculadora. Para esta parte, es de notar que aparece el número <span class="math inline">\([1]\)</span> y luego sí la respuesta. Ese valor hace referencia al orden del dato dentro de los elementos del programa<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>Si por otro lado se quiere el producto de 1255 con la (raíz cuadrada) de 25 o mejor escrito como <span class="math inline">\(1255 \times \sqrt{25}\)</span>, entonces debe ser establecido de tal forma que</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="intro.html#cb4-1"></a><span class="dv">1255</span><span class="op">*</span><span class="kw">sqrt</span>(<span class="dv">25</span>) <span class="co">#Producto con la raíz cuadrada de 25</span></span></code></pre></div>
 <pre><code>## [1] 6275</code></pre>
 <p>Si se desea obtener una seguidilla de cálculos ya toca escribirlos -<em>como si fuera una lista</em>- e implementarlos directamente, ya es:</p>
@@ -196,7 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1"></a><span class="co">#Soy carlos yanes</span></span></code></pre></div>
 <div id="bit" class="section level2">
 <h2><span class="header-section-number">1.1</span> Script o archivo tipo bitacora</h2>
-<p>Los <strong>script</strong> son archivos que comunmente se desarrollan en formato de <em>texto</em> o de <em>bloc de notas</em>. Constituye la forma de llevar y controlar los codigos que se van a implementar los cálculos y se referencian como bitacoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de <strong>R</strong> en un formato clásico o si ya se hace uso de <a href="https://rstudio.com/products/rstudio/download/">R Studio</a> que es un potente aliado<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> en el entorno de ejecución del programa <strong>R</strong>, se le denomina IDE<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+<p>Los <strong>script</strong> son archivos que comunmente se desarrollan en formato de <em>texto</em> o de <em>bloc de notas</em>. Constituye la forma de llevar y controlar los codigos que se van a implementar los cálculos y se referencian como bitacoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de <strong>R</strong> en un formato clásico o si ya se hace uso de <a href="https://rstudio.com/products/rstudio/download/">R Studio</a> que es un potente aliado<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> en el entorno de ejecución del programa <strong>R</strong>, se le denomina IDE<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
 <p>Abrir un archivo tipo <strong>script</strong> en <strong>R Studio</strong> es sencillo, solo hay que ir al panel superior izquierdo del programa y debajo de la pestaña de File se encuentra el logo (+) y al dar <em>click</em> se le desplegará la lista de opciones y en el, es solo volver a dar <em>click</em> donde dice <strong>R Script</strong>, una forma mas rápida con el teclado es con las teclas <code>Ctrl+Shift+N</code>.</p>
 <p><img src="imagenes/C0.png" width="75%" style="display: block; margin: auto;" />
 Al crear un <strong>script</strong> en <strong>R Studio</strong>, podrá desarrollar y escribir los códigos con el cual va realizar su trabajo, mire lo siguiente:</p>
@@ -246,7 +247,7 @@ Al crear un <strong>script</strong> en <strong>R Studio</strong>, podrá desarro
 
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="intro.html#cb8-1"></a>  <span class="kw">abs</span>(<span class="op">-</span><span class="dv">3</span>) <span class="co"># Es el valor absoluto de (-3)</span></span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<p>Sin embargo, en una operación conjunta, si se posee una lista de elementos o un <strong>vector</strong> de elementos, es mucho mas simple implementarlo de tal forma que:</p>
+<p>Sin embargo, en una operación conjunta, si se posee una lista de elementos o un <strong>vector</strong> de elementos<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>, es mucho mas simple implementarlo de tal forma que:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="intro.html#cb10-1"></a>  x&lt;-<span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">11</span>,<span class="op">-</span><span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">21</span>,<span class="op">-</span><span class="dv">31</span>,<span class="op">-</span><span class="dv">33</span>) <span class="co"># Lista de valores</span></span>
 <span id="cb10-2"><a href="intro.html#cb10-2"></a>  <span class="kw">abs</span>(x)</span></code></pre></div>
 <pre><code>## [1]  3  5  3 11 16 18 21 31 33</code></pre>
@@ -278,14 +279,13 @@ Al crear un <strong>script</strong> en <strong>R Studio</strong>, podrá desarro
 <span id="cb16-2"><a href="intro.html#cb16-2"></a>  operación</span>
 <span id="cb16-3"><a href="intro.html#cb16-3"></a>  <span class="kw">return</span>(valor)</span>
 <span id="cb16-4"><a href="intro.html#cb16-4"></a>}</span></code></pre></div>
-<p>Observe que los tres <em>ingredientes</em> aparecen en la forma del código, como la manera de implementarlo. - <em>No puede olvidar usar los elementos de function y return y los respectivos corchetes</em> -</p>
+<p>Observe que los tres <em>ingredientes</em> aparecen en la forma del código, como la manera de implementarlo. - <em>No puede olvidar usar los elementos de function, return y los respectivos corchetes</em> -</p>
 
 <div class="example">
-<span id="exm:Pr4" class="example"><strong>Ejemplo 1.4  (Estructura de una función)  </strong></span>Tome a consideración que le solicitan la sumatoria de un grupo de valores.
+<span id="exm:Pr4" class="example"><strong>Ejemplo 1.4  (Estructura de una función)  </strong></span>Tome a consideración que le solicitan la sumatoria de un grupo de valores.Es sencillo obtener en <strong>R</strong> cuando uno tiene una expresión como:
 </div>
 
-<p>Es sencillo obtener en <strong>R</strong> cuando uno tiene una expresión como:
-<span class="math display">\[\begin{equation*}
+<p><span class="math display">\[\begin{equation*}
 \sum \limits_{i=1}^{n} X_{i} \quad \text{donde i}\; \in \; \left \{1,2,3,\dots,n \right\}
 \end{equation*}\]</span></p>
 <p>Que viene a ser la suma de los elementos de la variable X. Tome por ejemplo que X sean las <em>ventas</em> de una empresa en ciertos periodos de tiempo y sus valores correspondientes son: <span class="math inline">\(\{350, 690,1120, 990 \}\)</span>. Le solicitan calcular la suma de todas ellas.</p>
@@ -306,7 +306,7 @@ Al crear un <strong>script</strong> en <strong>R Studio</strong>, podrá desarro
 <p><span class="math display">\[\begin{equation*}
 \prod \limits_{i=2}^{4} (3i-2)
 \end{equation*}\]</span></p>
-<p>Ya no se involucra la <strong>sumatoria</strong> si no la <strong>productoria</strong>. Esta última, no suma los elementos si no que los múltiplica<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. Mire que de forma <em>manual</em>, la anterior expresión nos brinda como resultado lo siguiente:</p>
+<p>Ya no se involucra la <strong>sumatoria</strong> si no la <strong>productoria</strong>. Esta última, no suma los elementos si no que los múltiplica<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Mire que de forma <em>manual</em>, la anterior expresión nos brinda como resultado lo siguiente:</p>
 <p><span class="math display">\[\begin{equation*}
 (3)(2)-2\times(3)(3)-2\times(3)(4)-2=280
 \end{equation*}\]</span></p>
@@ -318,16 +318,22 @@ Al crear un <strong>script</strong> en <strong>R Studio</strong>, podrá desarro
 <p>En la anterior, la formula se subdivide en varias partes dentro de la <em>operación</em>, ya que primero hay que decirle que dentro de los límites de los valores del argumento. Hay que hacer la operación continua del calculo de cada uno de los valores que hacen parte del vector asociado. <em>Dicho en otras palabras, tener presente los límites, desde donde va hasta donde términa</em>. Imaginese si el límite fuera mayor, es decir, que la operación se hiciera desde 3 hasta 15.</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1"></a><span class="kw">pro</span>(<span class="dv">3</span>,<span class="dv">15</span>)</span></code></pre></div>
 <pre><code>## [1] 2.857633e+17</code></pre>
-<p>La cifra obtenida nos da en <em>notación científica</em> o valores extremadamente gigantes, con eso, ya nos ahorramos mucho tiempo y una gran cantidad de cálculos.</p>
+<p>La cifra obtenida nos da en <em>notación científica</em> o valores extremadamente grandes, con eso, ya nos ahorramos mucho tiempo y una gran cantidad de notación, mas o menos eso sería:</p>
+<p><span class="math display">\[\begin{equation*}
+(3)(3)-2\times(3)(4)-2\times(3)(5)-2\times(3)(6)-2\times \cdots \times(3)(15)-2=2.8576e+17
+\end{equation*}\]</span></p>
+<p>La función realiza los cálculos de forma que el codigo permite simplificar <em>-objetivo de la ciencia-</em> enorme cantidad de cálculos y conseguir el resultado en el menor tiempo posible.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>Para mayor información consulte la pagina web o enlace de <strong>R Studio</strong>.<a href="intro.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Por sus siglas en ingles significa <em>Integrated Drive Electronics</em>, no es mas que un entorno de desarrollo interactivo que facilita interactuar mejor y de manera mas “amigable” con todos los asuntos de los lenguajes de programación<a href="intro.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>La expresión de productoria sirve para simplificar cadenas de multiplicaciones. Si usted tiene <span class="math inline">\(\prod \limits_{i=1}^{n} x_{i}\)</span>, esto le indica multiplicar cada elemento del vector desde el primer el elemento hasta el último.<a href="intro.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Dentro de la gran mayoría de los cálculos simples o sencillos, saldrá ese número siempre acompañando cada resultado.<a href="intro.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Para mayor información consulte la pagina web o enlace de <strong>R Studio</strong>.<a href="intro.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Por sus siglas en ingles significa <em>Integrated Drive Electronics</em>, no es mas que un entorno de desarrollo interactivo que facilita interactuar mejor y de manera mas “amigable” con todos los asuntos de los lenguajes de programación<a href="intro.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Estos deben ir separados por (,) y colocando de ante sala la letra (c) que hace referencia a <em>columnas</em> en el programa <strong>R</strong> <a href="intro.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>La expresión de productoria sirve para simplificar una gran cantidad de multiplicaciones de elementos. Si usted tiene <span class="math inline">\(\prod \limits_{i=1}^{n} x_{i}\)</span>, esto le indica multiplicar cada valor del vector desde el primer elemento hasta el último, empezando desde el número que le diga el subíndice hasta el del superíndice que será el límite superior.<a href="intro.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

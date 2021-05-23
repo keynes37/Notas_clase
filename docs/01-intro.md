@@ -1,6 +1,6 @@
 # Primeros cálculos en R {#intro}
 
-La idea es familiarizarse con el entorno de **R** y definirlo como lo que es, una "calculadora". Es por esto que una forma de hacer calculos con la base instrumental que trae el programa, se presenta a continuación.
+La idea es familiarizarse con el entorno de **R** y definirlo como lo que es, una "calculadora". Es por esto que una forma de hacer cálculos con la base instrumental que trae el programa, se presenta a continuación.
 
 \BeginKnitrBlock{example}\iffalse{-91-79-112-101-114-97-99-105-111-110-101-115-32-98-225-115-105-99-97-115-93-}\fi{}<div class="example"><span class="example" id="exm:Pr1"><strong>(\#exm:Pr1)  \iffalse (Operaciones básicas) \fi{} </strong></span>Si intentamos sumar un par de números enteros es facíl tener:</div>\EndKnitrBlock{example}
 
@@ -13,7 +13,9 @@ La idea es familiarizarse con el entorno de **R** y definirlo como lo que es, un
 ## [1] 8
 ```
 
-Si por otro lado se quiere el producto de 1255 con la (raíz) del número 25 o $\sqrt{25}$, entonces debe ser escrito de tal forma que
+Note que el resultado es similar a cualquier calculadora. Para esta parte, es de notar que aparece el número $[1]$ y luego sí la respuesta. Ese valor hace referencia al orden del dato dentro de los elementos del programa^[Dentro de la gran mayoría de los cálculos simples o sencillos, saldrá ese número siempre acompañando cada resultado.].
+
+Si por otro lado se quiere el producto de 1255 con la (raíz cuadrada) de 25 o mejor escrito como $1255 \times \sqrt{25}$, entonces debe ser establecido de tal forma que
 
 
 ```r
@@ -77,7 +79,7 @@ En economía y en muchas ciencias sociales se hace uso extensivo de las **matem�
 ```
 ## [1] 3
 ```
-Sin embargo, en una operación conjunta, si se posee una lista de elementos o un **vector** de elementos, es mucho mas simple implementarlo de tal forma que:
+Sin embargo, en una operación conjunta, si se posee una lista de elementos o un **vector** de elementos^[Estos deben ir separados por (,) y colocando de ante sala la letra (c) que hace referencia a _columnas_ en el programa **R** ], es mucho mas simple implementarlo de tal forma que:
 
 
 ```r
@@ -132,11 +134,9 @@ mi_formula<- function(argumento) {
   return(valor)
 }
 ```
-Observe que los tres _ingredientes_ aparecen en la forma del código, como la manera de implementarlo. - _No puede olvidar usar los elementos de function y return y los respectivos corchetes_ -
+Observe que los tres _ingredientes_ aparecen en la forma del código, como la manera de implementarlo. - _No puede olvidar usar los elementos de function, return y los respectivos corchetes_ -
 
-\BeginKnitrBlock{example}\iffalse{-91-69-115-116-114-117-99-116-117-114-97-32-100-101-32-117-110-97-32-102-117-110-99-105-243-110-93-}\fi{}<div class="example"><span class="example" id="exm:Pr4"><strong>(\#exm:Pr4)  \iffalse (Estructura de una función) \fi{} </strong></span>Tome a consideración que le solicitan la sumatoria de un grupo de valores.</div>\EndKnitrBlock{example}
-
-Es sencillo obtener en **R** cuando uno tiene una expresión como:
+\BeginKnitrBlock{example}\iffalse{-91-69-115-116-114-117-99-116-117-114-97-32-100-101-32-117-110-97-32-102-117-110-99-105-243-110-93-}\fi{}<div class="example"><span class="example" id="exm:Pr4"><strong>(\#exm:Pr4)  \iffalse (Estructura de una función) \fi{} </strong></span>Tome a consideración que le solicitan la sumatoria de un grupo de valores.Es sencillo obtener en **R** cuando uno tiene una expresión como:</div>\EndKnitrBlock{example}
 \begin{equation*}
 \sum \limits_{i=1}^{n} X_{i} \quad \text{donde i}\; \in \; \left \{1,2,3,\dots,n \right\}
 \end{equation*}
@@ -179,7 +179,7 @@ Obteniendo el resultado ideal del cubo de uno de los datos anteriores.-_Igual pu
 \prod \limits_{i=2}^{4} (3i-2)
 \end{equation*}
 
-Ya no se involucra la **sumatoria** si no la **productoria**. Esta última, no suma los elementos si no que los múltiplica^[La expresión de productoria sirve para simplificar cadenas de multiplicaciones. Si usted tiene $\prod \limits_{i=1}^{n} x_{i}$, esto le indica multiplicar cada elemento del vector desde el primer el elemento hasta el último.]. Mire que de forma _manual_, la anterior expresión nos brinda como resultado lo siguiente:
+Ya no se involucra la **sumatoria** si no la **productoria**. Esta última, no suma los elementos si no que los múltiplica^[La expresión de productoria sirve para simplificar una gran cantidad de multiplicaciones de elementos. Si usted tiene $\prod \limits_{i=1}^{n} x_{i}$, esto le indica multiplicar cada valor del vector desde el primer elemento hasta el último, empezando desde el número que le diga el subíndice hasta el del superíndice que será el límite superior.]. Mire que de forma _manual_, la anterior expresión nos brinda como resultado lo siguiente:
 
 \begin{equation*}
 (3)(2)-2\times(3)(3)-2\times(3)(4)-2=280
@@ -209,7 +209,13 @@ pro(3,15)
 ## [1] 2.857633e+17
 ```
 
-La cifra obtenida nos da en _notación científica_ o valores extremadamente gigantes, con eso, ya nos ahorramos mucho tiempo y una gran cantidad de cálculos.
+La cifra obtenida nos da en _notación científica_ o valores extremadamente grandes, con eso, ya nos ahorramos mucho tiempo y una gran cantidad de notación, mas o menos eso sería:
+
+\begin{equation*}
+(3)(3)-2\times(3)(4)-2\times(3)(5)-2\times(3)(6)-2\times \cdots \times(3)(15)-2=2.8576e+17
+\end{equation*}
+
+La función realiza los cálculos de forma que el codigo permite simplificar _-objetivo de la ciencia-_ enorme cantidad de cálculos y conseguir el resultado en el menor tiempo posible.
 
 
 

@@ -1,10 +1,10 @@
 # Datos
 
-Una de las cosas mas importantes que debe hacer todo economista al hacer uso de **R**, es importar las **bases de datos** con las que pretende trabajar y armar su *proyecto*. Los datos vienen desde distintos formatos y poseen varias clasificaciones, recordemos unos conceptos claves para avanzar
+Una de las cosas mas importantes que debe hacer todo economista al hacer uso de **R**, es importar las **bases de datos** con las que pretende trabajar y armar su *proyecto*. Los datos vienen desde distintos formatos y poseen varias clasificaciones, recordemos algunos conceptos claves para avanzar
 
 - **Base de datos**: Es una colección especifica de datos.
-- Que posee un **formato** ``popular'', es decir, es una tabla (matrices)
-- También es de forma *rectangular* cuya organización aborda **filas** y **columnas**.
+- Que posee un **formato** ``popular'', es decir, es una tabla de forma de (matrices)
+- También es de forma *rectangular*, cuya organización aborda un número de **filas** y **columnas**.
 - Una **fila** tiene datos de una o varias *variables* para un mismo **individuo**.
 - Una **columna** contiene valores de una *variable* para muchos individuos.
 
@@ -24,7 +24,13 @@ En economía regularmente se trabaja con tres tipos de bases de datos conocidos 
 
 ### Datos de corte transversal
 
-Son aquellas *bases* que regularmente tienen información en un solo periodo de tiempo y que varían por individuos, instituciones, países o empresas. Se denotan sus observaciones con el subíndice (i), por ejemplo: $X_{i}$. Donde $X$ hace referencia a cada una de las variables como el nombre, la edad, los ingresos, etc.  
+Son aquellas *bases* que regularmente tienen información en un solo periodo de tiempo y que varían por individuos, instituciones, países o empresas. Se denotan sus observaciones con el subíndice (i), por ejemplo: $X_{i}$. Donde $X$ hace referencia a cada una de las variables como el nombre, la edad, los ingresos, etc. Y la parte de (i) de los _individuos_. Esto puede ser por ejemplo la variable $Edad_{i}$, donde (i) toma los nombres Diego, Marcela, Angela, Carlos y será la edad correspondiente de cada uno de ellos. Mire que si lo escribimos en un vector con datos, esto es:
+
+\begin{equation*}
+Edad_{i}= \{ 21, 19, 23, 25 \}
+\end{equation*}
+
+Una tabla mas general, con distintas variables por individuos es este:
 
 ```{r, echo=FALSE, warning=FALSE, fig.cap="Datos de Corte transversal. Fuente: Elaboración del Autor"}
 library(flextable)
@@ -175,6 +181,10 @@ Para esta parte, es importante mirar todos los elementos de trabajo con las base
 # Acceder a una sola variable:
 ventas$producto2
 
+```
+El resultado le mostrará solo los valores contenidos en esa variable denominada **producto2**. Podrá incluso trabajar con ella por si sola e incluso empezar a realizar _subconjuntos_ de datos solo con un grupo de ellas, como ocurre a continuación de tres formas distintas para conseguir un mismo objetivo.
+
+```{r, echo=TRUE}
 # Generar una nueva variable en el data frame
 ventas$totalv1 <- ventas$producto1 + ventas$producto2 + ventas$producto3 
 
@@ -183,13 +193,14 @@ ventas$totalv2 <- with(ventas, producto1+producto2+producto3)
 
 # Lo mismo pero usando el comando "attach":
 attach(ventas)
+```
+Este último (attach), sirve para simplificar aun mas el codigo y ahorrar el uso del signo ($) dentro del código, ademas de brindarle un mensaje tipo "ambiente" que se ha realizado en el programa.
+```{r, echo=TRUE}
 ventas$totalv3 <- producto1+producto2+producto3
 detach(ventas)
-
-# Resultados:
 ventas
 ```
-
+Note que es importante nuevamente decirle a **R** que debe quitar la opción con el comando (detach), esto libera su uso y puede ser utilizado con otras bases de datos.
 
 
 

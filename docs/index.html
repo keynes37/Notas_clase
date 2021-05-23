@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notas de Clase de Econometría I en R</title>
-  <meta name="description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
+  <title>Notas de Clase de Econometría (básica) en R</title>
+  <meta name="description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notas de Clase de Econometría I en R" />
+  <meta property="og:title" content="Notas de Clase de Econometría (básica) en R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
+  <meta property="og:description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notas de Clase de Econometría I en R" />
+  <meta name="twitter:title" content="Notas de Clase de Econometría (básica) en R" />
   
-  <meta name="twitter:description" content="Notas de clase del curso de Econometría I de la universidad del Norte con el Software de R" />
+  <meta name="twitter:description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   
 
 <meta name="author" content="Carlos Andres Yanes Guerra" />
 
 
-<meta name="date" content="2021-05-22" />
+<meta name="date" content="2021-05-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,7 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.1" data-path="datos.html"><a href="datos.html#trabajando-con-data-frames"><i class="fa fa-check"></i><b>2.3.1</b> Trabajando con Data Frames</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="metodos.html"><a href="metodos.html"><i class="fa fa-check"></i><b>3</b> Metodos</a></li>
+<li class="chapter" data-level="3" data-path="primer-análisis-de-datos.html"><a href="primer-análisis-de-datos.html"><i class="fa fa-check"></i><b>3</b> Primer análisis de datos</a></li>
 <li class="chapter" data-level="4" data-path="aplicaciones.html"><a href="aplicaciones.html"><i class="fa fa-check"></i><b>4</b> Aplicaciones</a><ul>
 <li class="chapter" data-level="4.1" data-path="aplicaciones.html"><a href="aplicaciones.html#caso-1"><i class="fa fa-check"></i><b>4.1</b> Caso 1</a></li>
 <li class="chapter" data-level="4.2" data-path="aplicaciones.html"><a href="aplicaciones.html#caso-2"><i class="fa fa-check"></i><b>4.2</b> Caso 2</a></li>
@@ -165,7 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas de Clase de Econometría I en R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas de Clase de Econometría (básica) en R</a>
           </h1>
         </div>
 
@@ -174,22 +174,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Notas de Clase de Econometría I en R</h1>
+<h1 class="title">Notas de Clase de Econometría (básica) en R</h1>
 <p class="author"><em>Carlos Andres Yanes Guerra</em></p>
-<p class="date"><em>2021-05-22</em></p>
+<p class="date"><em>2021-05-23</em></p>
 </div>
 <div id="presentación" class="section level1 unnumbered">
 <h1>Presentación</h1>
 <p><img src="imagenes/log1.jpg" width="30%" style="display: block; margin: auto auto auto 0;" /></p>
-<p>Este libro intenta ser una guía practica del curso de Econometría I de la <strong>Universidad del Norte</strong> que se encuentra ubicada en la costa norte de Colombia. Posee un singular número de aplicativos prácticos, que son guiados utilizando los <em>principales</em> comandos del programa (software) <strong>R</strong> que son aprendidos por los estudiantes durante la clase magistral.</p>
-<p>Para esta ocasión, se hace uso del Software <strong>R</strong>. El cual es: <em>Un lenguaje de programación de código abierto y que es enfocado en el análisis de datos, especialmente en el tema estadístico.</em> Sus creadores son Robert Gentleman y Ross Ihaka. En el link de <a href="https://www.r-project.org/index.html" class="uri">https://www.r-project.org/index.html</a> podrá encontrar todo lo relacionado con el programa y mayor información.</p>
-<p>Uno de los <em>paquetes</em> que mas se utilizará en esta guía es el <strong>Tidyverse</strong>, que puede ser instalado desde el CRAN de la siguiente forma:</p>
+<p>Este libro intenta ser una guía practica del curso de Econometría I de la <strong>Universidad del Norte</strong> que se encuentra ubicada en la costa norte de Colombia.</p>
+<p>Posee un singular número de aplicativos prácticos, que son guiados utilizando los <em>principales</em> comandos del programa (software) <strong>R</strong> que son aprendidos por los estudiantes durante la clase magistral para el tema de <strong>Econometría</strong> una de las materias del core del departamento.</p>
+<p>El Software <strong>R</strong> es: <em>Un lenguaje de programación de código abierto y que es enfocado en el análisis de datos, especialmente en el tema estadístico.</em> Sus creadores son Robert Gentleman y Ross Ihaka. En el link de <a href="https://www.r-project.org/index.html" class="uri">https://www.r-project.org/index.html</a> podrá encontrar todo lo relacionado con el programa y obtener mayor información sobre este.</p>
+<p>Uno de los <em>paquetes</em> que mas se utilizará en esta guía es el <strong>Tidyverse</strong>, que se recomienda instalar de forma inmediata y que puede ser realizado desde la pestaña de la consola del software de la siguiente forma:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="co"># Paquete para trabajar directamente</span></span></code></pre></div>
+<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="co"># Paquete para trabajar directamente los temas de analisis de datos y econometría en R</span></span></code></pre></div>
 <p>Los complementos y bases de este curso regularmente son demos de otras bases reales o utilizadas en los distintos textos de econometría que han venido realizando investigación empírica.</p>
-<p>Muchos de los comandos y códigos aquí utilizados fueron tomados del sitio web de Florian Heiss: <a href="http://www.urfie.net/" class="uri">http://www.urfie.net/</a> que hace referencia al uso de <strong>R</strong> en la Econometría.</p>
-<p>Otras ayudas que complementan estas notas de clase, son las que se tiene en los resumen de comandos de <strong>R</strong> o plantillas de apoyo conocidas como “Cheat sheets” que pueden ser conseguidas en <a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a>.</p>
-<p>Para este curso, es bueno poseer ciertos <em>conceptos</em> estadísticos base y algunas nociones de álgebra, como conocer algunos operadores y términos de estas áreas.</p>
+<p>Muchos de los comandos y códigos aquí utilizados fueron tomados del sitio web de Florian Heiss: <a href="http://www.urfie.net/" class="uri">http://www.urfie.net/</a> que hace referencia al uso de <strong>R</strong> en la Econometría de manera mucho mas general.</p>
+<p>Otras ayudas que complementan estas notas de clase, son las que se tiene en los resumen de comandos de <strong>R</strong> o plantillas de apoyo conocidas como “Cheat sheets” que pueden ser obtenidas en <a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a>.</p>
+<p>Para el curso, es bueno poseer ciertos <em>conceptos</em> estadísticos base y algunas nociones de álgebra, como conocer algunos operadores y términos que se usan en esas ciencias.</p>
 
 </div>
             </section>
