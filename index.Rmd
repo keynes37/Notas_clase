@@ -1,5 +1,5 @@
 --- 
-title: "Lecturas de Clase Econometría I en R"
+title: "Notas de Clase de Econometría I en R"
 author: "Carlos Andres Yanes Guerra"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -31,4 +31,8 @@ install.packages("tidyverse")
 Los complementos y bases de este curso regularmente son demos de otras bases reales o utilizadas en los distintos textos de econometría que han venido realizando investigación empírica.
 
 Muchos de los comandos y códigos aquí utilizados fueron tomados del sitio web de Florian Heiss: <http://www.urfie.net/> que hace referencia al uso de **R** en la Econometría.
+
+Otras ayudas que complementan estas notas de clase, son las que se tiene en los resumen de comandos de **R** o plantillas de apoyo conocidas como "Cheat sheets" que pueden ser conseguidas en <https://www.rstudio.com/resources/cheatsheets/>.
+
+Para este curso, es bueno poseer ciertos _conceptos_ estadísticos base y algunas nociones de álgebra, como conocer algunos operadores y términos de estas áreas.
 

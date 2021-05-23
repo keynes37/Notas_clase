@@ -1,3 +1,3 @@
-# Methods
+# Metodos
 
-We describe our methods in this chapter.
+Acá se describe

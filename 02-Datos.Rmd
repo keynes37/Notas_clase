@@ -122,9 +122,74 @@ fpt
 
 ```
 
-
-
 ## Importación de datos
 
-Ahora esto, pero mirando el git adicional
+Una de las cosas mas requeridas dentro del trabajo de **R** hace referencia a la importación de datos que no son propiamente de el. Aquellos datos o bases regularmente vienen en formatos de xml, csv, dta, asll, etc. Por ende, se hace necesario la implementación de comandos o de la ayuda directa del programa. Los paquetes declarados a continuación permiten realizar esto.
+
+```{r eval=FALSE}
+library(foreign)    # Para convertir datos *.dta
+library(haven)      # Para importar datos de otros programas
+library(readxl)     # Para leer archivos de excel
+
+#Ejemplo de una base de datos que esta en excel (debe tener cuidado con la ruta C:)
+Pruebadatos <- read_excel("C:/Users/keyne/OneDrive/Escritorio/Pruebadatos.xlsx")
+View(Pruebadatos)
+
+#Exportar una base de datos desde R a formato CSV de excel con el comando "write"
+write.csv(Pruebadatos, file = "archivodeprueba.csv")
+```
+Es de recordar que al exportar datos, estos quedan grabados en la carpeta de trabajo que se le ha establecido al programa desde un inicio. A continuación tres pasos para conocer donde se arrojan los archivos exportados y guardados en la ruta. 
+
+```{r rmarkdown3, echo=FALSE, out.width='75%', fig.align='center'}
+knitr::include_graphics("imagenes/C3.png")
+```
+
+Si tiene en cuenta lo anterior, lo primero es irse a la pestaña de `files`, luego le da `click` a la (tuerca) `more` y decirle ir al directorio de trabajo o `Go To Working Directory`. Si no desea esa carpeta, puede crear una en su computador con **new folder** y de ahí marcar la opción de `Set As Working Directory`. De esta manera podrá guardar todos sus archivos en esa ubicación.
+
+## Datos propios en R
+
+Algunas veces, se pueden vincular los datos propiamente al programa sin necesidad de importarlos. Se puede construir por *vectores*, estos a su vez se convierten o consideran como una lista de elementos que finalmente constituyen una columna de una base de datos o **dataframe**. Para mirar un caso de esto, mire el código a continuación:
+
+```{r, echo=TRUE}
+# Definimos un vector x para todos los años:
+anos<- c(2018,2019,2020,2021,2022,2023)
+# Definimos una matriz de y valores:
+producto1<-c(10,13,16,19,17,18); producto2<-c(21,32,43,15,19,36); producto3<-c(22,43,42,21,32,21)
+# Una forma de unir vectores es con el comando cbind
+ventas_mat <- cbind(producto1,producto2,producto3) 
+# Nombramos las filas con el vector de años:
+rownames(ventas_mat) <- anos 
+# La matriz de datos es:
+ventas_mat
+# POr último le decimos que lo tome como data frame
+ventas <- as.data.frame(ventas_mat)
+```
+
+La parte consecuente a **cbind** es para unir cada una de las columnas que se han venido creando. **R** trabaja con matrices, luego cada columna viene a ser un vector _columna_. Si la forma de unir fuera por filas, la opción a utilizar sería **rbind**.
+
+### Trabajando con Data Frames
+
+Para esta parte, es importante mirar todos los elementos de trabajo con las bases y estructuras de datos. En este, realizaremos algunas de las operaciones con ellas. Una forma de *seleccionar* variables es con la indicación del signo $ (pesos), se hace para seleccionar una variable de la tabla de datos. 
+
+```{r echo=TRUE}
+# Acceder a una sola variable:
+ventas$producto2
+
+# Generar una nueva variable en el data frame
+ventas$totalv1 <- ventas$producto1 + ventas$producto2 + ventas$producto3 
+
+# Lo mismo de lo anterior pero usando "with":
+ventas$totalv2 <- with(ventas, producto1+producto2+producto3)
+
+# Lo mismo pero usando el comando "attach":
+attach(ventas)
+ventas$totalv3 <- producto1+producto2+producto3
+detach(ventas)
+
+# Resultados:
+ventas
+```
+
+
+
 
