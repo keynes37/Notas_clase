@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 4 Aplicaciones | Notas de Clase de Econometría (básica) en R</title>
+  <title>Capítulo 3 Un Primer análisis de datos | Notas de Clase de Econometría (básica) en R</title>
   <meta name="description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 4 Aplicaciones | Notas de Clase de Econometría (básica) en R" />
+  <meta property="og:title" content="Capítulo 3 Un Primer análisis de datos | Notas de Clase de Econometría (básica) en R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 4 Aplicaciones | Notas de Clase de Econometría (básica) en R" />
+  <meta name="twitter:title" content="Capítulo 3 Un Primer análisis de datos | Notas de Clase de Econometría (básica) en R" />
   
   <meta name="twitter:description" content="Estas son las notas de clase del curso de Econometría I de la universidad del Norte del departamento de economía realizadas en el Software de R y R Studio." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="un-primer-análisis-de-datos.html"/>
-<link rel="next" href="final-words.html"/>
+<link rel="prev" href="datos.html"/>
+<link rel="next" href="aplicaciones.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -176,24 +176,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="aplicaciones" class="section level1">
-<h1><span class="header-section-number">Capítulo 4</span> Aplicaciones</h1>
-<p>Acá se muestra</p>
-<div id="caso-1" class="section level2">
-<h2><span class="header-section-number">4.1</span> Caso 1</h2>
+<div id="un-primer-análisis-de-datos" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> Un Primer análisis de datos</h1>
+<p>La <strong>importancia</strong> del análisis de datos es requerida para tomar decisiones y conocer muy bien lo que cada una de las variables nos esta indicando, es por esto que recurrimos a la <strong>estadística</strong> y hacemos uso de las distintas medidas de tendencia central ampliamente conocidas como <em>media</em>, <em>desviación estándar</em> (varianza), <em>asimetría</em> y <em>curtosis</em>.</p>
+<div id="métricas" class="section level2">
+<h2><span class="header-section-number">3.1</span> Métricas</h2>
+
+<div class="definition">
+<p><span id="def:media" class="definition"><strong>Definición 3.1  (Promedio o media aritmética)  </strong></span>Es una característica central de un grupo de datos u observaciones, se denomina muchas veces como la esperanza matematica (valor esperado) y esta compuesto por la sumatoria de todos los elementos dividos por el total de ellos.
+<span class="math display">\[\bar{X}= \frac{\sum \limits_{i=1}^{n} x_{i}}{n}\]</span></p>
 </div>
-<div id="caso-2" class="section level2">
-<h2><span class="header-section-number">4.2</span> Caso 2</h2>
+
+<p><em>Donde (n) es el tamaño de la muestra y (x) la variable de interés con sus observaciones (i) hasta (n).</em></p>
+<p>En <strong>R</strong> solo es cargar los datos con los que se pretende trabajar y empezar aplicar cada una de las formulas (funciones) y con esto tener las metricas que se requieren para un primer análisis</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="un-primer-análisis-de-datos.html#cb35-1"></a><span class="kw">library</span>(readxl) <span class="co"># Paquete para leer archivos de excel de Microsoft </span></span>
+<span id="cb35-2"><a href="un-primer-análisis-de-datos.html#cb35-2"></a><span class="co">#Se carga la base con la que se va a trabajar</span></span>
+<span id="cb35-3"><a href="un-primer-análisis-de-datos.html#cb35-3"></a>Pruebadatos &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;C:/Users/keyne/Downloads/Pruebadatos.xlsx&quot;</span>)</span>
+<span id="cb35-4"><a href="un-primer-análisis-de-datos.html#cb35-4"></a></span>
+<span id="cb35-5"><a href="un-primer-análisis-de-datos.html#cb35-5"></a><span class="co"># Promedio de una variable: El signo $ solo selecciona una de las variables de la base</span></span>
+<span id="cb35-6"><a href="un-primer-análisis-de-datos.html#cb35-6"></a></span>
+<span id="cb35-7"><a href="un-primer-análisis-de-datos.html#cb35-7"></a><span class="kw">mean</span>(Pruebadatos<span class="op">$</span>Salarios) <span class="co">#En este caso Salarios</span></span></code></pre></div>
+<pre><code>## [1] 222381.4</code></pre>
+<p>Lo que nos indica que los salarios de los individuos de la base en promedio son de unos $222.381.</p>
+
+<div class="definition">
+<p><span id="def:des" class="definition"><strong>Definición 3.2  (Varianza)  </strong></span>Regularmente se expresa como <span class="math inline">\((\sigma^2)\)</span> y nos dice que tan dispersa esta una serie de observaciones con respecto a la media o promedio aritmético. Es una resta al cuadrado dividido por el tamaño muestral.</p>
+<p><span class="math display">\[Var (X)=\frac{\sum \limits_{i=1}^{n} (x_{i} - \bar{x})^{2}}{n}\]</span></p>
+</div>
+
+<p><em>Donde (n) es el tamaño muestral, (x) la variable y ({x}) su respectiva media o promedio aritmético, </em></p>
+<p>Dentro del programa solo hay que escribir</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="un-primer-análisis-de-datos.html#cb37-1"></a><span class="kw">var</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<pre><code>## [1] 7878422680</code></pre>
+<p>Brindando como resultado 7878422680. Con el propósito de realizar una mejor <em>lectura</em> de la varianza, podemos extraer su raíz cuadrada, o directamente en <strong>R</strong> colocar el comando de la <em>desviación estandar</em> que es (sd)</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="un-primer-análisis-de-datos.html#cb39-1"></a><span class="kw">sd</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<pre><code>## [1] 88760.48</code></pre>
+<p>Y con este valor de 88760.48, podemos decir que tan dispersos esta cada uno de los salarios de la muestra con respecto a la media o promedio.</p>
+
+<div class="definition">
+<p><span id="def:asi" class="definition"><strong>Definición 3.3  (Asimetría)  </strong></span>Es denominada el tercer momento de una distribución. Tiene los elementos del promedio y la varianza y sirve para medir que tan concentrados estan los datos de una distribución. Suele clasificarse como asimetría <strong>positiva</strong> y <strong>negativa</strong>.</p>
+<p><span class="math display">\[Asímetría=\frac{\mu^{3}}{\sigma^{3}}\]</span></p>
+</div>
+
+<p><em>El término de <span class="math inline">\(\mu\)</span> es el mismo del promedio muestral solo que elevado al cubo</em>.</p>
+<p>Primero que todo, hay que instalar el paquete <strong>moments</strong> del CRAN<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> y esto se hace así</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="un-primer-análisis-de-datos.html#cb41-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;moments&quot;</span>)</span></code></pre></div>
+<p>Luego de instalado, ya se puede hacer uso de los momentos de asímetria y curtosis respectivamente para calcular las métricas de la variable de interés</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="un-primer-análisis-de-datos.html#cb42-1"></a><span class="kw">library</span>(moments) </span>
+<span id="cb42-2"><a href="un-primer-análisis-de-datos.html#cb42-2"></a><span class="co">#Asimetría</span></span>
+<span id="cb42-3"><a href="un-primer-análisis-de-datos.html#cb42-3"></a><span class="kw">skewness</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<pre><code>## [1] 0.9690956</code></pre>
+<p>Para este caso podemos afirmar con el valor de 0.97 existe una asimetría <strong>positiva</strong>, lo que indica que hay cierta variación de los salarios hacia la izquierda de la distribución de los salarios, pero que hay una gran participación de salarios menores a la media.</p>
+
+<div class="definition">
+<p><span id="def:skw" class="definition"><strong>Definición 3.4  (Curtosis)  </strong></span>Es denominada como el cuarto momento de una distribución. Nos indica que forma tiene la varianza de la variable. Podemos decir que si esta <span class="math inline">\(K=3\)</span>, es <strong>mesocurtica</strong> y su varianza es estable y su forma gráfica es similar a la de una distribución normal o Gaussiana. Si por el contrario, su valor es <span class="math inline">\(K&lt;3\)</span> podemos identificarla como <strong>platicurtica</strong> y su varianza es alta. Por último si <span class="math inline">\(K&gt;3\)</span> tendremos una distribución de forma <strong>leptocurtica</strong> y la indicación es una varianza pequeña.</p>
+<p><span class="math display">\[\frac{\sum \limits_{i=1}^{n} (x_{i} - \bar{x})^{4}}{n\sigma^{2}}-3\]</span></p>
+</div>
+
+<p><em>El término de <span class="math inline">\(x_{i}\)</span> son cada una de las observaciones, (n) el número total de observaciones, <span class="math inline">\(\bar{x}\)</span> el mismo del promedio muestral</em>.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="un-primer-análisis-de-datos.html#cb44-1"></a><span class="co">#Curtosis</span></span>
+<span id="cb44-2"><a href="un-primer-análisis-de-datos.html#cb44-2"></a><span class="kw">kurtosis</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<pre><code>## [1] 3.268191</code></pre>
+<p>La forma de la Curtosis puede indicarnos que tan “volatiles” son nuestros datos, para este caso arrojó un resultado de 3.26, siguiendo una forma mesocurtica y de varianza estable.</p>
+</div>
+<div id="los-resumenes-de-métricas" class="section level2">
+<h2><span class="header-section-number">3.2</span> Los resumenes de métricas</h2>
+<p>Existen un grupo de paquetes que permiten de igual forma realizar <strong>resumenes</strong> de estas métricas por grupo de variables y tener el mismo resultado que lo anterior.</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="6">
+<li id="fn6"><p>Es el acrónimo de Comprehensive R Archive Network y es desde donde se pueden descargar los paquetes para trabajar en el programa de R.<a href="un-primer-análisis-de-datos.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="un-primer-análisis-de-datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aplicaciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

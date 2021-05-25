@@ -24,7 +24,7 @@
 <meta name="author" content="Carlos Andres Yanes Guerra" />
 
 
-<meta name="date" content="2021-05-23" />
+<meta name="date" content="2021-05-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,7 +149,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.1" data-path="datos.html"><a href="datos.html#trabajando-con-data-frames"><i class="fa fa-check"></i><b>2.3.1</b> Trabajando con Data Frames</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="primer-análisis-de-datos.html"><a href="primer-análisis-de-datos.html"><i class="fa fa-check"></i><b>3</b> Primer análisis de datos</a></li>
+<li class="chapter" data-level="3" data-path="un-primer-análisis-de-datos.html"><a href="un-primer-análisis-de-datos.html"><i class="fa fa-check"></i><b>3</b> Un Primer análisis de datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="un-primer-análisis-de-datos.html"><a href="un-primer-análisis-de-datos.html#métricas"><i class="fa fa-check"></i><b>3.1</b> Métricas</a></li>
+<li class="chapter" data-level="3.2" data-path="un-primer-análisis-de-datos.html"><a href="un-primer-análisis-de-datos.html#los-resumenes-de-métricas"><i class="fa fa-check"></i><b>3.2</b> Los resumenes de métricas</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="aplicaciones.html"><a href="aplicaciones.html"><i class="fa fa-check"></i><b>4</b> Aplicaciones</a><ul>
 <li class="chapter" data-level="4.1" data-path="aplicaciones.html"><a href="aplicaciones.html#caso-1"><i class="fa fa-check"></i><b>4.1</b> Caso 1</a></li>
 <li class="chapter" data-level="4.2" data-path="aplicaciones.html"><a href="aplicaciones.html#caso-2"><i class="fa fa-check"></i><b>4.2</b> Caso 2</a></li>
@@ -195,6 +198,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Todas las operaciones que se deseen realizar en <strong>R</strong> que involucran operaciones matemáticas, pueden ser escritos directamente y obtendremos los resultados deseados.</p>
 <p>Note que el operador (#) es para decirle al programa que no ejecute lo que se encuentra después de él, se usa para tomar notas o escribir algo al respecto en los archivos <strong>script</strong> de <strong>R</strong>, por ejemplo:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1"></a><span class="co">#Soy carlos yanes</span></span></code></pre></div>
+<p>En el programa <strong>R</strong> se hace uso de varios elementos como el operador “&lt;-”, que es la forma para <em>asignar</em> algo y el operador <strong>pipeline</strong> “%&gt;%” que se usa para <em>condesar</em> objetos. El primero se usa de tal forma que</p>
+<p><code>`r x&lt;-2 es lo mismo que (x=2)`</code></p>
+<p>Y el pipeline sirve igual si se tiene:</p>
+<p><code>`r y&lt;-mean(log(x))`</code></p>
+<p>Con lo que es</p>
+<p><code>`r y&lt;-x %&gt;% log %&gt;% mean`</code></p>
+<p>La persona se irá adecuando al uso de ellos en la medida que se familiariza con el programa.</p>
 <div id="bit" class="section level2">
 <h2><span class="header-section-number">1.1</span> Script o archivo tipo bitacora</h2>
 <p>Los <strong>script</strong> son archivos que comunmente se desarrollan en formato de <em>texto</em> o de <em>bloc de notas</em>. Constituye la forma de llevar y controlar los codigos que se van a implementar los cálculos y se referencian como bitacoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de <strong>R</strong> en un formato clásico o si ya se hace uso de <a href="https://rstudio.com/products/rstudio/download/">R Studio</a> que es un potente aliado<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> en el entorno de ejecución del programa <strong>R</strong>, se le denomina IDE<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>

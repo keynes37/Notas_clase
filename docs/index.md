@@ -1,7 +1,7 @@
 --- 
 title: "Notas de Clase de Econometría (básica) en R"
 author: "Carlos Andres Yanes Guerra"
-date: "2021-05-23"
+date: "2021-05-24"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]

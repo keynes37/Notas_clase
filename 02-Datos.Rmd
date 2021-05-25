@@ -24,10 +24,10 @@ En economía regularmente se trabaja con tres tipos de bases de datos conocidos 
 
 ### Datos de corte transversal
 
-Son aquellas *bases* que regularmente tienen información en un solo periodo de tiempo y que varían por individuos, instituciones, países o empresas. Se denotan sus observaciones con el subíndice (i), por ejemplo: $X_{i}$. Donde $X$ hace referencia a cada una de las variables como el nombre, la edad, los ingresos, etc. Y la parte de (i) de los _individuos_. Esto puede ser por ejemplo la variable $Edad_{i}$, donde (i) toma los nombres Diego, Marcela, Angela, Carlos y será la edad correspondiente de cada uno de ellos. Mire que si lo escribimos en un vector con datos, esto es:
+Son aquellas *bases* que regularmente tienen información en un solo periodo de tiempo y que varían por individuos, instituciones, países o empresas. Se denotan sus observaciones con el subíndice (i), por ejemplo: $X_{i}$. Donde $X$ hace referencia a cada una de las variables como el nombre, la edad, los ingresos, etc. Y la parte de (i) de los _individuos_. Esto puede ser por ejemplo la variable $Edad_{i}$, donde (i) toma los nombres Matias, Kayson, Garrick, Cordell, etc. y será la edad correspondiente de cada uno de ellos. Mire que si lo escribimos en un vector con datos, esto es:
 
 \begin{equation*}
-Edad_{i}= \{ 21, 19, 23, 25 \}
+Edad_{i}= \{ 27, 26, 22, 25, \dots, 33 \}
 \end{equation*}
 
 Una tabla mas general, con distintas variables por individuos es este:
@@ -136,6 +136,12 @@ Una de las cosas mas requeridas dentro del trabajo de **R** hace referencia a la
 library(foreign)    # Para convertir datos *.dta
 library(haven)      # Para importar datos de otros programas
 library(readxl)     # Para leer archivos de excel
+
+#Ejemplos utilizabdo readxl:
+library("readxl")
+datos <- read_csv("miarchivo.csv") # Un primer ejemplo
+datos <- read_excel("miarchivo.xlsx") # Un segundo ejemplo
+
 
 #Ejemplo de una base de datos que esta en excel (debe tener cuidado con la ruta C:)
 Pruebadatos <- read_excel("C:/Users/keyne/OneDrive/Escritorio/Pruebadatos.xlsx")

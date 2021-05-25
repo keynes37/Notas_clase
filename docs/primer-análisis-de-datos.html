@@ -111,14 +111,28 @@
             <section class="normal" id="section-">
 <div id="primer-análisis-de-datos" class="section level1">
 <h1><span class="header-section-number">Capítulo 3</span> Primer análisis de datos</h1>
-<p>La <strong>importancia</strong> del análisis de datos es requerida para tomar decisiones y conocer muy bien lo que cada una de las variables nos esta indicando, es por esto que recurrimos a la <strong>estadística</strong> y hacemos uso de las distintas medidas de tendencia central ampliamente conocidas como media, desviación estándar, asimetría y curtosis.</p>
-<p><span class="math display">\[\begin{align*}
-    \bar{X}=&amp; \frac{\sum \limits_{i=1}^{n} x_{i}}{n}\\
-    Var(X)=&amp; \frac{\sum \limits_{i=1}^{n} (x_{i} - \bar{x})^{2}}{n} \\
-    Asimetría (Fisher)=&amp; \frac{\mu^{3}}{\sigma^{3}} \\
-    Curtosis= &amp; \frac{\sum \limits_{i=1}^{n} (x_{i} - \bar{x})^{4}}{n\sigma^{2}}-3 
-\end{align*}\]</span>
-<em>Donde (n) es el tamaño de la muestra, (x) las observaciones,<span class="math inline">\((\sigma)\)</span> la desviación estándar, <span class="math inline">\(\mu\)</span> la media de la distribución. Con una base de datos podemos entonces tener</em></p>
+<p>La <strong>importancia</strong> del análisis de datos es requerida para tomar decisiones y conocer muy bien lo que cada una de las variables nos esta indicando, es por esto que recurrimos a la <strong>estadística</strong> y hacemos uso de las distintas medidas de tendencia central ampliamente conocidas como <em>media</em>, <em>desviación estándar</em> (varianza), <em>asimetría</em> y <em>curtosis</em>.</p>
+
+<div class="definition">
+<p><span id="def:media" class="definition"><strong>Definición 3.1  (Promedio o media aritmética)  </strong></span>Es una característica central de un grupo de datos u observaciones, se denomina muchas veces como la esperanza matematica (valor esperado) y esta compuesto por la sumatoria de todos los elementos dividos por el total de ellos.
+<span class="math display">\[\bar{X}= \frac{\sum \limits_{i=1}^{n} x_{i}}{n}\]</span></p>
+</div>
+
+<p><em>Donde (n) es el tamaño de la muestra y (x) la variable de interés con sus obsevarciones (i) hasta (n).</em></p>
+
+<div class="definition">
+<p><span id="def:des" class="definition"><strong>Definición 3.2  (Varianza)  </strong></span>Regularmente se expresa como <span class="math inline">\((\sigma^2)\)</span> y nos dice que tan dispersa esta una serie de observaciones con respecto a la media o promedio aritmético. Es una resta al cuadrado dividido por el tamaño muestral.</p>
+<p><span class="math display">\[Var (X)=\frac{\sum \limits_{i=1}^{n} (x_{i} - \Bar{x})^{2}}{n}\]</span></p>
+</div>
+
+<p><em>Donde (n) es el tamaño muestral, (x) la variable y () su respectiva media, </em></p>
+
+<div class="definition">
+<p><span id="def:asi" class="definition"><strong>Definición 3.3  (Asimetría)  </strong></span>Es denominada el tercer momento de una distribución. Tiene los elementos del promedio y la varianza y sirve para medir que tan concentrados estan los datos de una distribución. Suele clasificarse como asimetría <strong>positiva</strong> y <strong>negativa</strong>.</p>
+<p><span class="math display">\[Asímetría=\frac{\mu^{3}}{\sigma^{3}}\]</span></p>
+</div>
+
+<p><em>El término de <span class="math inline">\(\mu\)</span> es el mismo del promedio muestral</em></p>
 
 </div>
             </section>

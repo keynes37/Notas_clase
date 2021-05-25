@@ -35,6 +35,20 @@ Note que el operador (#) es para decirle al programa que no ejecute lo que se en
 #Soy carlos yanes
 ```
 
+En el programa **R** se hace uso de varios elementos como el operador "<-", que es la forma para _asignar_ algo y el operador **pipeline** "%>%" que se usa para _condesar_ objetos. El primero se usa de tal forma que
+
+`` `r knitr::inline_expr("x<-2 es lo mismo que (x=2)")` `` 
+
+Y el pipeline sirve igual si se tiene:
+
+`` `r knitr::inline_expr("y<-mean(log(x))")` ``
+
+Con lo que es
+
+`` `r knitr::inline_expr("y<-x %>% log %>% mean")` ``
+
+La persona se irá adecuando al uso de ellos en la medida que se familiariza con el programa.
+
 ## Script o archivo tipo bitacora {#bit}
 
 Los **script** son archivos que comunmente se desarrollan en formato de _texto_ o de _bloc de notas_. Constituye la forma de llevar y controlar los codigos que se van a implementar los cálculos y se referencian como bitacoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de **R** en un formato clásico o si ya se hace uso de [R Studio](https://rstudio.com/products/rstudio/download/) que es un potente aliado^[Para mayor información consulte la pagina web o enlace de **R Studio**.] en el entorno de ejecución del programa **R**, se le denomina IDE^[Por sus siglas en ingles significa _Integrated Drive Electronics_, no es mas que un entorno de desarrollo interactivo que facilita interactuar mejor y de manera mas "amigable" con todos los asuntos de los lenguajes de programación].

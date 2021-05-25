@@ -2,6 +2,10 @@ exm:Pr1
 exm:Pr2
 exm:Pr3
 exm:Pr4
+def:media
+def:des
+def:asi
+def:skw
 intro
 bit
 otras-operaciones-y-cálculos
@@ -14,7 +18,9 @@ panel-longitudinal
 importación-de-datos
 datos-propios-en-r
 trabajando-con-data-frames
-primer-análisis-de-datos
+un-primer-análisis-de-datos
+métricas
+los-resumenes-de-métricas
 aplicaciones
 caso-1
 caso-2
