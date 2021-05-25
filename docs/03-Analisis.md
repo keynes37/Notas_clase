@@ -1,4 +1,4 @@
-# Un Primer análisis de datos
+# Un primer análisis de datos {#Analisis}
 La **importancia** del análisis de datos es requerida para tomar decisiones y conocer muy bien lo que cada una de las variables nos esta indicando, es por esto que recurrimos a la **estadística** y hacemos uso de las distintas medidas de tendencia central ampliamente conocidas como _media_, _desviación estándar_ (varianza), _asimetría_ y _curtosis_.
 
 ## Métricas  
@@ -106,7 +106,48 @@ kurtosis(Pruebadatos$Salarios)
 
 La forma de la Curtosis puede indicarnos que tan "volatiles" son nuestros datos, para este caso arrojó un resultado de 3.26, siguiendo una forma mesocurtica y de varianza estable.
 
-## Los resumenes de métricas
-Existen un grupo de paquetes que permiten de igual forma realizar **resumenes** de estas métricas por grupo de variables y tener el mismo resultado que lo anterior.
+## Los resúmenes de métricas
+Existen un grupo de paquetes que permiten de igual forma realizar **resumenes** de estas métricas por grupo de variables y tener el mismo resultado que lo anterior. En esta parte lo haremos con el paquete **skimr**
 
+Este se instala de tal manera que:
+
+
+```r
+install.packages("skimr")
+```
+
+Luego de instalado el paquete, ya se puede hacer uso desde la biblioteca del programa **R** y nos dará como resultado una tabla bastante amplia de acuerdo a la composición que tenga dicha base.
+
+
+```r
+library(skimr)
+
+skim(Pruebadatos)
+```
+
+
+Table: (\#tab:unnamed-chunk-8)Data summary
+
+|                         |            |
+|:------------------------|:-----------|
+|Name                     |Pruebadatos |
+|Number of rows           |11          |
+|Number of columns        |4           |
+|_______________________  |            |
+|Column type frequency:   |            |
+|numeric                  |4           |
+|________________________ |            |
+|Group variables          |None        |
+
+
+**Variable type: numeric**
+
+|skim_variable | n_missing| complete_rate|      mean|       sd|     p0|      p25|    p50|      p75|   p100|hist                                     |
+|:-------------|---------:|-------------:|---------:|--------:|------:|--------:|------:|--------:|------:|:----------------------------------------|
+|Salarios      |         0|             1| 222381.36| 88760.48| 115000| 178097.5| 197000| 259500.0| 420000|▅▇▂▂▂ |
+|Edad          |         0|             1|     28.27|     7.55|     18|     21.5|     25|     35.5|     38|▇▃▁▂▇ |
+|Experiencia   |         0|             1|      6.27|     4.82|      0|      1.5|      6|     10.5|     13|▇▂▂▃▆ |
+|CI            |         0|             1|     96.09|     8.78|     85|     91.5|     93|     98.0|    114|▂▇▁▁▂ |
+
+Encontramos para este ejemplo, los resultados del número de filas y columnas^[Incluso si se encuentran completas o existen datos perdidos o valores en blanco.], la clasificación que poseen cada una de las variables y las estadísticas de tendencia central incluyendo los percentiles que van desde el primero, hasta la mediana o (p50) y así hasta los valores mayores p100 de cada una de ellas. De igual forma aparece un minigráfico de histograma que en la sección [De gráficas](#Graficos) ampliaremos su explicación y uso.
 

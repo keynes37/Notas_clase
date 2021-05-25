@@ -41,17 +41,23 @@ En el programa **R** se hace uso de varios elementos como el operador "<-", que 
 
 Y el pipeline sirve igual si se tiene:
 
-`` `r knitr::inline_expr("y<-mean(log(x))")` ``
+```{r, eval=FALSE}
+
+y<-mean(log(x))
+```
 
 Con lo que es
 
-`` `r knitr::inline_expr("y<-x %>% log %>% mean")` ``
+```{r, eval=FALSE}
+y<-x %>% log %>% mean
 
-La persona se irá adecuando al uso de ellos en la medida que se familiariza con el programa.
+```
+
+La persona se irá adecuando al uso de ellos en la medida que se familiariza con el programa y podrá determinar su _estrategia_ de escritura de código, de acuerdo a la premisa de mantener lo que mas se pueda de forma simple y sencilla.
 
 ## Script o archivo tipo bitacora {#bit}
 
-Los **script** son archivos que comunmente se desarrollan en formato de _texto_ o de _bloc de notas_. Constituye la forma de llevar y controlar los codigos que se van a implementar los cálculos y se referencian como bitacoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de **R** en un formato clásico o si ya se hace uso de [R Studio](https://rstudio.com/products/rstudio/download/) que es un potente aliado^[Para mayor información consulte la pagina web o enlace de **R Studio**.] en el entorno de ejecución del programa **R**, se le denomina IDE^[Por sus siglas en ingles significa _Integrated Drive Electronics_, no es mas que un entorno de desarrollo interactivo que facilita interactuar mejor y de manera mas "amigable" con todos los asuntos de los lenguajes de programación].
+Los **script** son archivos que comúnmente se desarrollan en formato de _texto_ o de _bloc de notas_. Constituye la forma de llevar y controlar los códigos que se van a implementar los cálculos y se referencian como bitácoras o diario, en el cuál se trabaja. Regularmente vienen instalados en el programa de **R** en un formato clásico o si ya se hace uso de [R Studio](https://rstudio.com/products/rstudio/download/) que es un potente aliado^[Para mayor información consulte la pagina web o enlace de **R Studio**.] en el entorno de ejecución del programa **R**, se le denomina IDE^[Por sus siglas en ingles significa _Integrated Drive Electronics_, no es mas que un entorno de desarrollo interactivo que facilita interactuar mejor y de manera mas "amigable" con todos los asuntos de los lenguajes de programación].
 
 Abrir un archivo tipo **script** en **R Studio** es sencillo, solo hay que ir al panel superior izquierdo del programa y debajo de la pestaña de File se encuentra el logo (+) y al dar _click_ se le desplegará la lista de opciones y en el, es solo volver a dar _click_ donde dice **R Script**, una forma mas rápida con el teclado es con las teclas `Ctrl+Shift+N`.  
 

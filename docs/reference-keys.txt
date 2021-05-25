@@ -6,11 +6,12 @@ def:media
 def:des
 def:asi
 def:skw
+tab:unnamed-chunk-8
 intro
 bit
 otras-operaciones-y-cálculos
 funciones-en-r
-datos
+Datos
 estructuras-de-datos-usualmente-utilizadas-en-econometría
 datos-de-corte-transversal
 datos-de-series-de-tiempo
@@ -18,10 +19,9 @@ panel-longitudinal
 importación-de-datos
 datos-propios-en-r
 trabajando-con-data-frames
-un-primer-análisis-de-datos
+Analisis
 métricas
 los-resumenes-de-métricas
-aplicaciones
-caso-1
-caso-2
+Graficos
 final-words
+los-resúmenes-de-métricas
