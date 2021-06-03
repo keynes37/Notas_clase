@@ -206,7 +206,7 @@ ventas$totalv3 <- producto1+producto2+producto3
 detach(ventas)
 ventas
 ```
-Note que es importante nuevamente decirle a **R** que debe quitar la opción con el comando (detach), esto libera su uso y puede ser utilizado con otras bases de datos.
+Note que es importante nuevamente decirle a **R** que debe quitar la opción con el comando (detach), esto libera su uso y puede ser utilizado con otras bases de datos o dataframes.
 
 
 
