@@ -104,7 +104,7 @@ kurtosis(Pruebadatos$Salarios)
 ## [1] 3.268191
 ```
 
-La forma de la Curtosis puede indicarnos que tan "volatiles" son nuestros datos, para este caso arrojó un resultado de 3.26, siguiendo una forma mesocurtica y de varianza estable.
+La forma de la Curtosis puede indicarnos que tan "volátiles" son nuestros datos, para este caso arrojó un resultado de 3.26, que nos define a los _salarios_ que siguen una distribución de forma mesocurtica y que posee una varianza estable, _lo que quiere decir que entre los salarios de los individuos no existe demasiada diferencia_.
 
 ## Los resúmenes de métricas
 Existen un grupo de paquetes que permiten de igual forma realizar **resumenes** de estas métricas por grupo de variables y tener el mismo resultado que lo anterior. En esta parte lo haremos con el paquete **skimr**
@@ -149,5 +149,13 @@ Table: (\#tab:unnamed-chunk-8)Data summary
 |Experiencia   |         0|             1|      6.27|     4.82|      0|      1.5|      6|     10.5|     13|▇▂▂▃▆ |
 |CI            |         0|             1|     96.09|     8.78|     85|     91.5|     93|     98.0|    114|▂▇▁▁▂ |
 
-Encontramos para este ejemplo, los resultados del número de filas y columnas^[Incluso si se encuentran completas o existen datos perdidos o valores en blanco.], la clasificación que poseen cada una de las variables y las estadísticas de tendencia central incluyendo los percentiles que van desde el primero, hasta la mediana o (p50) y así hasta los valores mayores p100 de cada una de ellas. De igual forma aparece un minigráfico de histograma que en la sección [De gráficas](#Graficos) ampliaremos su explicación y uso.
+Encontramos para este ejemplo, los resultados del número de filas (n) y columnas^[Incluso si se encuentran completas o existen datos perdidos o valores en blanco.], la clasificación que poseen cada una de las variables y las estadísticas de tendencia central incluyendo los percentiles que van desde el primero, hasta la mediana o (p50) y así hasta los valores mayores p100 de cada una de ellas. De igual forma aparece un minigráfico de histograma que en la sección [de gráficas](#Graficos) ampliaremos su explicación y uso.
+
+\BeginKnitrBlock{example}\iffalse{-91-65-110-225-108-105-115-105-115-32-100-105-114-101-99-116-111-93-}\fi{}<div class="example"><span class="example" id="exm:exam11"><strong>(\#exm:exam11)  \iffalse (Análisis directo) \fi{} </strong></span>Del conjunto de variables de la base de datos, encontramos las variables de salarios, edad, experiencia y el resultado obtenido en su prueba de coeficiente intelectual (CI). Dentro de las carácteristicas a reconocer, se encuentra que la edad promedio de los individuos es de 28 años, quien mas edad tiene su dato es de 38 años y quien menos tiene, apenas 18. De la prueba de CI, quien mas resultado obtuvo sacó 114 y el promedio para las 11 observaciones es de 96.1, nada mal para ese grupo como tal</div>\EndKnitrBlock{example}
+
+## Datos cualitativos
+
+Es común tambien intentar medir algunas variables cuya naturaleza son condiciones **cualitativas**
+
+
 

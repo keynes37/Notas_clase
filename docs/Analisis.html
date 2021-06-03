@@ -24,7 +24,7 @@
 <meta name="author" content="Carlos Andres Yanes Guerra" />
 
 
-<meta name="date" content="2021-05-25" />
+<meta name="date" content="2021-06-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -152,8 +152,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="Analisis.html"><a href="Analisis.html"><i class="fa fa-check"></i><b>3</b> Un primer análisis de datos</a><ul>
 <li class="chapter" data-level="3.1" data-path="Analisis.html"><a href="Analisis.html#métricas"><i class="fa fa-check"></i><b>3.1</b> Métricas</a></li>
 <li class="chapter" data-level="3.2" data-path="Analisis.html"><a href="Analisis.html#los-resúmenes-de-métricas"><i class="fa fa-check"></i><b>3.2</b> Los resúmenes de métricas</a></li>
+<li class="chapter" data-level="3.3" data-path="Analisis.html"><a href="Analisis.html#datos-cualitativos"><i class="fa fa-check"></i><b>3.3</b> Datos cualitativos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="Graficos.html"><a href="Graficos.html"><i class="fa fa-check"></i><b>4</b> Gráficas en el analisis</a></li>
+<li class="chapter" data-level="4" data-path="Graficos.html"><a href="Graficos.html"><i class="fa fa-check"></i><b>4</b> Gráficas en el análisis</a></li>
 <li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="bibliografía.html"><a href="bibliografía.html"><i class="fa fa-check"></i>Bibliografía</a></li>
 </ul>
@@ -186,13 +187,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p><em>Donde (n) es el tamaño de la muestra y (x) la variable de interés con sus observaciones (i) hasta (n).</em></p>
 <p>En <strong>R</strong> solo es cargar los datos con los que se pretende trabajar y empezar aplicar cada una de las formulas (funciones) y con esto tener las metricas que se requieren para un primer análisis</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="Analisis.html#cb1-1"></a><span class="kw">library</span>(readxl) <span class="co"># Paquete para leer archivos de excel de Microsoft </span></span>
-<span id="cb1-2"><a href="Analisis.html#cb1-2"></a><span class="co">#Se carga la base con la que se va a trabajar</span></span>
-<span id="cb1-3"><a href="Analisis.html#cb1-3"></a>Pruebadatos &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;C:/Users/keyne/Downloads/Pruebadatos.xlsx&quot;</span>)</span>
-<span id="cb1-4"><a href="Analisis.html#cb1-4"></a></span>
-<span id="cb1-5"><a href="Analisis.html#cb1-5"></a><span class="co"># Promedio de una variable: El signo $ solo selecciona una de las variables de la base</span></span>
-<span id="cb1-6"><a href="Analisis.html#cb1-6"></a></span>
-<span id="cb1-7"><a href="Analisis.html#cb1-7"></a><span class="kw">mean</span>(Pruebadatos<span class="op">$</span>Salarios) <span class="co">#En este caso Salarios</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="Analisis.html#cb37-1"></a><span class="kw">library</span>(readxl) <span class="co"># Paquete para leer archivos de excel de Microsoft </span></span>
+<span id="cb37-2"><a href="Analisis.html#cb37-2"></a><span class="co">#Se carga la base con la que se va a trabajar</span></span>
+<span id="cb37-3"><a href="Analisis.html#cb37-3"></a>Pruebadatos &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;C:/Users/keyne/Downloads/Pruebadatos.xlsx&quot;</span>)</span>
+<span id="cb37-4"><a href="Analisis.html#cb37-4"></a></span>
+<span id="cb37-5"><a href="Analisis.html#cb37-5"></a><span class="co"># Promedio de una variable: El signo $ solo selecciona una de las variables de la base</span></span>
+<span id="cb37-6"><a href="Analisis.html#cb37-6"></a></span>
+<span id="cb37-7"><a href="Analisis.html#cb37-7"></a><span class="kw">mean</span>(Pruebadatos<span class="op">$</span>Salarios) <span class="co">#En este caso Salarios</span></span></code></pre></div>
 <pre><code>## [1] 222381.4</code></pre>
 <p>Lo que nos indica que los salarios de los individuos de la base en promedio son de unos $222.381.</p>
 
@@ -203,10 +204,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p><em>Donde (n) es el tamaño muestral, (x) la variable y ({x}) su respectiva media o promedio aritmético, </em></p>
 <p>Dentro del programa solo hay que escribir</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="Analisis.html#cb3-1"></a><span class="kw">var</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="Analisis.html#cb39-1"></a><span class="kw">var</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
 <pre><code>## [1] 7878422680</code></pre>
 <p>Brindando como resultado 7878422680. Con el propósito de realizar una mejor <em>lectura</em> de la varianza, podemos extraer su raíz cuadrada, o directamente en <strong>R</strong> colocar el comando de la <em>desviación estandar</em> que es (sd)</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="Analisis.html#cb5-1"></a><span class="kw">sd</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="Analisis.html#cb41-1"></a><span class="kw">sd</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
 <pre><code>## [1] 88760.48</code></pre>
 <p>Y con este valor de 88760.48, podemos decir que tan dispersos esta cada uno de los salarios de la muestra con respecto a la media o promedio.</p>
 
@@ -216,12 +217,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 
 <p><em>El término de <span class="math inline">\(\mu\)</span> es el mismo del promedio muestral solo que elevado al cubo</em>.</p>
-<p>Primero que todo, hay que instalar el paquete <strong>moments</strong> del CRAN<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> y esto se hace así</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="Analisis.html#cb7-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;moments&quot;</span>)</span></code></pre></div>
+<p>Primero que todo, hay que instalar el paquete <strong>moments</strong> del CRAN<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> y esto se hace así</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="Analisis.html#cb43-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;moments&quot;</span>)</span></code></pre></div>
 <p>Luego de instalado, ya se puede hacer uso de los momentos de asímetria y curtosis respectivamente para calcular las métricas de la variable de interés</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="Analisis.html#cb8-1"></a><span class="kw">library</span>(moments) </span>
-<span id="cb8-2"><a href="Analisis.html#cb8-2"></a><span class="co">#Asimetría</span></span>
-<span id="cb8-3"><a href="Analisis.html#cb8-3"></a><span class="kw">skewness</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="Analisis.html#cb44-1"></a><span class="kw">library</span>(moments) </span>
+<span id="cb44-2"><a href="Analisis.html#cb44-2"></a><span class="co">#Asimetría</span></span>
+<span id="cb44-3"><a href="Analisis.html#cb44-3"></a><span class="kw">skewness</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
 <pre><code>## [1] 0.9690956</code></pre>
 <p>Para este caso podemos afirmar con el valor de 0.97 existe una asimetría <strong>positiva</strong>, lo que indica que hay cierta variación de los salarios hacia la izquierda de la distribución de los salarios, pero que hay una gran participación de salarios menores a la media.</p>
 
@@ -231,20 +232,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 
 <p><em>El término de <span class="math inline">\(x_{i}\)</span> son cada una de las observaciones, (n) el número total de observaciones, <span class="math inline">\(\bar{x}\)</span> el mismo del promedio muestral</em>.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="Analisis.html#cb10-1"></a><span class="co">#Curtosis</span></span>
-<span id="cb10-2"><a href="Analisis.html#cb10-2"></a><span class="kw">kurtosis</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="Analisis.html#cb46-1"></a><span class="co">#Curtosis</span></span>
+<span id="cb46-2"><a href="Analisis.html#cb46-2"></a><span class="kw">kurtosis</span>(Pruebadatos<span class="op">$</span>Salarios)</span></code></pre></div>
 <pre><code>## [1] 3.268191</code></pre>
-<p>La forma de la Curtosis puede indicarnos que tan “volatiles” son nuestros datos, para este caso arrojó un resultado de 3.26, siguiendo una forma mesocurtica y de varianza estable.</p>
+<p>La forma de la Curtosis puede indicarnos que tan “volátiles” son nuestros datos, para este caso arrojó un resultado de 3.26, que nos define a los <em>salarios</em> que siguen una distribución de forma mesocurtica y que posee una varianza estable, <em>lo que quiere decir que entre los salarios de los individuos no existe demasiada diferencia</em>.</p>
 </div>
 <div id="los-resúmenes-de-métricas" class="section level2">
 <h2><span class="header-section-number">3.2</span> Los resúmenes de métricas</h2>
 <p>Existen un grupo de paquetes que permiten de igual forma realizar <strong>resumenes</strong> de estas métricas por grupo de variables y tener el mismo resultado que lo anterior. En esta parte lo haremos con el paquete <strong>skimr</strong></p>
 <p>Este se instala de tal manera que:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="Analisis.html#cb12-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="Analisis.html#cb48-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;skimr&quot;</span>)</span></code></pre></div>
 <p>Luego de instalado el paquete, ya se puede hacer uso desde la biblioteca del programa <strong>R</strong> y nos dará como resultado una tabla bastante amplia de acuerdo a la composición que tenga dicha base.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="Analisis.html#cb13-1"></a><span class="kw">library</span>(skimr)</span>
-<span id="cb13-2"><a href="Analisis.html#cb13-2"></a></span>
-<span id="cb13-3"><a href="Analisis.html#cb13-3"></a><span class="kw">skim</span>(Pruebadatos)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="Analisis.html#cb49-1"></a><span class="kw">library</span>(skimr)</span>
+<span id="cb49-2"><a href="Analisis.html#cb49-2"></a></span>
+<span id="cb49-3"><a href="Analisis.html#cb49-3"></a><span class="kw">skim</span>(Pruebadatos)</span></code></pre></div>
 <table>
 <caption><span id="tab:unnamed-chunk-8">Tabla 3.1: </span>Data summary</caption>
 <tbody>
@@ -354,15 +355,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>Encontramos para este ejemplo, los resultados del número de filas y columnas<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, la clasificación que poseen cada una de las variables y las estadísticas de tendencia central incluyendo los percentiles que van desde el primero, hasta la mediana o (p50) y así hasta los valores mayores p100 de cada una de ellas. De igual forma aparece un minigráfico de histograma que en la sección <a href="Graficos.html#Graficos">De gráficas</a> ampliaremos su explicación y uso.</p>
+<p>Encontramos para este ejemplo, los resultados del número de filas (n) y columnas<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>, la clasificación que poseen cada una de las variables y las estadísticas de tendencia central incluyendo los percentiles que van desde el primero, hasta la mediana o (p50) y así hasta los valores mayores p100 de cada una de ellas. De igual forma aparece un minigráfico de histograma que en la sección <a href="Graficos.html#Graficos">de gráficas</a> ampliaremos su explicación y uso.</p>
+
+<div class="example">
+<span id="exm:exam11" class="example"><strong>Ejemplo 3.1  (Análisis directo)  </strong></span>Del conjunto de variables de la base de datos, encontramos las variables de salarios, edad, experiencia y el resultado obtenido en su prueba de coeficiente intelectual (CI). Dentro de las carácteristicas a reconocer, se encuentra que la edad promedio de los individuos es de 28 años, quien mas edad tiene su dato es de 38 años y quien menos tiene, apenas 18. De la prueba de CI, quien mas resultado obtuvo sacó 114 y el promedio para las 11 observaciones es de 96.1, nada mal para ese grupo como tal
+</div>
+
+</div>
+<div id="datos-cualitativos" class="section level2">
+<h2><span class="header-section-number">3.3</span> Datos cualitativos</h2>
+<p>Es común tambien intentar medir algunas variables cuya naturaleza son condiciones <strong>cualitativas</strong></p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Es el acrónimo de Comprehensive R Archive Network y es desde donde se pueden descargar los paquetes para trabajar en el programa de R.<a href="Analisis.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Incluso si se encuentran completas o existen datos perdidos o valores en blanco.<a href="Analisis.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<ol start="6">
+<li id="fn6"><p>Es el acrónimo de Comprehensive R Archive Network y es desde donde se pueden descargar los paquetes para trabajar en el programa de R.<a href="Analisis.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Incluso si se encuentran completas o existen datos perdidos o valores en blanco.<a href="Analisis.html#fnref7" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

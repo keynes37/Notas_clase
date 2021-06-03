@@ -1,5 +1,5 @@
 # Gráficas en el análisis {#Graficos}
 
-Acá se muestra
+Acá se muestra otro ejemplo
 
 

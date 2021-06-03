@@ -86,7 +86,7 @@ _El término de $x_{i}$ son cada una de las observaciones, (n) el número total 
 kurtosis(Pruebadatos$Salarios)
 ```
 
-La forma de la Curtosis puede indicarnos que tan "volatiles" son nuestros datos, para este caso arrojó un resultado de 3.26, siguiendo una forma mesocurtica y de varianza estable.
+La forma de la Curtosis puede indicarnos que tan "volátiles" son nuestros datos, para este caso arrojó un resultado de 3.26, que nos define a los _salarios_ que siguen una distribución de forma mesocurtica y que posee una varianza estable, _lo que quiere decir que entre los salarios de los individuos no existe demasiada diferencia_.
 
 ## Los resúmenes de métricas
 Existen un grupo de paquetes que permiten de igual forma realizar **resumenes** de estas métricas por grupo de variables y tener el mismo resultado que lo anterior. En esta parte lo haremos con el paquete **skimr**
@@ -105,5 +105,15 @@ library(skimr)
 skim(Pruebadatos)
 ```
 
-Encontramos para este ejemplo, los resultados del número de filas y columnas^[Incluso si se encuentran completas o existen datos perdidos o valores en blanco.], la clasificación que poseen cada una de las variables y las estadísticas de tendencia central incluyendo los percentiles que van desde el primero, hasta la mediana o (p50) y así hasta los valores mayores p100 de cada una de ellas. De igual forma aparece un minigráfico de histograma que en la sección [De gráficas](#Graficos) ampliaremos su explicación y uso.
+Encontramos para este ejemplo, los resultados del número de filas (n) y columnas^[Incluso si se encuentran completas o existen datos perdidos o valores en blanco.], la clasificación que poseen cada una de las variables y las estadísticas de tendencia central incluyendo los percentiles que van desde el primero, hasta la mediana o (p50) y así hasta los valores mayores p100 de cada una de ellas. De igual forma aparece un minigráfico de histograma que en la sección [de gráficas](#Graficos) ampliaremos su explicación y uso.
+
+```{example, label="exam11", name="Análisis directo"}
+Del conjunto de variables de la base de datos, encontramos las variables de salarios, edad, experiencia y el resultado obtenido en su prueba de coeficiente intelectual (CI). Dentro de las carácteristicas a reconocer, se encuentra que la edad promedio de los individuos es de 28 años, quien mas edad tiene su dato es de 38 años y quien menos tiene, apenas 18. De la prueba de CI, quien mas resultado obtuvo sacó 114 y el promedio para las 11 observaciones es de 96.1, nada mal para ese grupo como tal
+```
+
+## Datos cualitativos
+
+Es común tambien intentar medir algunas variables cuya naturaleza son condiciones **cualitativas**
+
+
 
